@@ -124,4 +124,27 @@ a.block-chip:hover{border-color:var(--project-accent);color:var(--project-accent
  .strip-track .block-media-surface.is-placeholder{height:min(24vh,160px);width:100%}
  .block-numbers>.block-label,.block-compare>.block-label{margin:0}
 }
+/* A single-screen opening; later sections keep the same block vocabulary. */
+.project-opening{height:calc(100svh - var(--header-height,70px));display:flex;flex-direction:column;justify-content:space-between;gap:24px;padding-top:clamp(20px,4svh,48px);padding-bottom:clamp(24px,4svh,42px)}
+.project-opening>.content-block{margin:0;flex-shrink:0}
+.block-page .project-opening .vertical-hero{margin:0}
+.post-opening{--block-space:16vh;display:flow-root;padding-top:16vh}
+.post-opening>.content-block:last-child{margin-bottom:0}
+.post-opening .block-row:has(+ .block-strip){margin-bottom:6vh}
+.post-opening .block-strip:has(+ .block-numbers){margin-bottom:6vh}
+.block-highlight .block-copy .highlight-statement{font-size:clamp(1.6rem,2.5vw,2rem);line-height:1.35;margin:0}
+.block-highlight .block-copy>p:not(.highlight-statement){font-size:var(--reading-size);line-height:1.4;margin:28px 0 0}
+.block-highlight .block-copy>.block-chip-list{margin-top:26px}
+.block-numbers .numbers-grid{grid-column:2}
+.block-page:has(.project-opening) .vertical-end{margin-top:16vh}
+@media(max-width:700px){
+ .project-opening{padding-top:24px;padding-bottom:24px;gap:20px}
+ .project-opening .block-copy{font-size:1.1rem}
+ .block-numbers .numbers-grid{grid-column:1}
+}
+@media(max-width:700px) and (max-height:650px){
+ .project-opening{padding-top:16px;padding-bottom:16px;gap:14px}
+ .project-opening .block-copy{font-size:1rem}
+ .block-page .project-opening .vertical-hero h1{font-size:clamp(2rem,8vw,3rem)}
+}
 @media(prefers-reduced-motion:reduce){.strip-progress span{transition:none}.strip-viewport{scroll-behavior:auto}}
