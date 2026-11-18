@@ -148,3 +148,14 @@ a.block-chip:hover{border-color:var(--project-accent);color:var(--project-accent
  .block-page .project-opening .vertical-hero h1{font-size:clamp(2rem,8vw,3rem)}
 }
 @media(prefers-reduced-motion:reduce){.strip-progress span{transition:none}.strip-viewport{scroll-behavior:auto}}
+
+/* Centre fitted strips; retain horizontal scrolling only for overflow. */
+.strip-track{justify-content:center}
+.strip-track figcaption{text-align:center}
+.strip-footer[hidden]{display:none}
+.block-strip:not(.is-overflowing) .strip-viewport{cursor:default}
+@media(min-width:701px){
+ .strip-track figure{max-width:none}
+ .strip-track .block-media-surface{max-width:none}
+ .strip-track img,.strip-track video{max-width:none}
+}
