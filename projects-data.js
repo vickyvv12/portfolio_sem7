@@ -36,31 +36,19 @@ window.PORTFOLIO_PROJECTS = [
         "chips": [
           {
             "text": "Literature study",
-            "href": "Literature study.pdf"
+            "href": "assets/cape/documents/literature-study.pdf"
           },
           {
             "text": "Competitive analysis",
-            "href": "Competitive analysis.pdf"
-          },
-          {
-            "text": "Stakeholder interview",
-            "href": "Stakeholder interview.pdf"
+            "href": "assets/cape/documents/competitive-analysis.pdf"
           },
           {
             "text": "Heuristic evaluation",
-            "href": "Heuristic evaluation.pdf"
-          },
-          {
-            "text": "Usability testing",
-            "href": "User test analysis.pdf"
-          },
-          {
-            "text": "Research report",
-            "href": "Research report.pdf"
+            "href": "assets/cape/documents/heuristic-evaluation.pdf"
           },
           {
             "text": "Advice report",
-            "href": "Advice Report.pdf"
+            "href": "assets/cape/documents/advice-report.pdf"
           }
         ]
       },
