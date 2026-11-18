@@ -34,11 +34,34 @@ window.PORTFOLIO_PROJECTS = [
           "I worked in the Double Diamond, using CMD research and design methods. After feedback from my company mentor, I narrowed my research questions: the library would help clients during onboarding, not serve internal use or reuse."
         ],
         "chips": [
-          "Literature study",
-          "Competitive analysis",
-          "Stakeholder interview",
-          "Heuristic evaluation",
-          "Usability testing"
+          {
+            "text": "Literature study",
+            "href": "Literature study.pdf"
+          },
+          {
+            "text": "Competitive analysis",
+            "href": "Competitive analysis.pdf"
+          },
+          {
+            "text": "Stakeholder interview",
+            "href": "Stakeholder interview.pdf"
+          },
+          {
+            "text": "Heuristic evaluation",
+            "href": "Heuristic evaluation.pdf"
+          },
+          {
+            "text": "Usability testing",
+            "href": "User test analysis.pdf"
+          },
+          {
+            "text": "Research report",
+            "href": "Research report.pdf"
+          },
+          {
+            "text": "Advice report",
+            "href": "Advice Report.pdf"
+          }
         ]
       },
       {
@@ -83,50 +106,10 @@ window.PORTFOLIO_PROJECTS = [
         ]
       },
       {
-        "type": "numbers",
-        "items": [
-          {
-            "value": "5",
-            "caption": "first-time users tested"
-          },
-          {
-            "value": "5 / 5",
-            "caption": "reached the library through the welcome message"
-          },
-          {
-            "value": "2",
-            "caption": "changes made after testing"
-          }
-        ]
-      },
-      {
         "type": "row",
         "label": "Result",
         "paragraphs": [
           "My advice to Cape was a shared sandbox with a single entry point and temporary sessions that reset automatically, separate from production, so potential clients can explore templates safely during demos and onboarding."
-        ]
-      },
-      {
-        "type": "documents",
-        "label": "Documents",
-        "showPending": false,
-        "items": [
-          {
-            "title": "Research report",
-            "href": null
-          },
-          {
-            "title": "Advice report",
-            "href": null
-          },
-          {
-            "title": "Heuristic evaluation",
-            "href": null
-          },
-          {
-            "title": "User test analysis",
-            "href": null
-          }
         ]
       }
     ],
