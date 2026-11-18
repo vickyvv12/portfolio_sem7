@@ -18,7 +18,10 @@ window.PortfolioBlocks = (() => {
     return `<div class="block-media-surface${item.compact ? ' is-compact' : ''}"><img src="${src}" alt="${esc(item.alt || 'Project image')}" loading="lazy" decoding="async" draggable="false">${note}</div>`;
   }
   const caption = text => text ? `<figcaption>${esc(text)}</figcaption>` : '';
+  const videoBlock = (b, device) => `<figure class="content-block block-video ${device ? 'block-device-video' : 'block-wide-video'} reveal"><div class="${device ? 'tablet-frame' : 'wide-video-frame'}"><video ${device ? 'data-visibility-play' : 'controls'} muted loop playsinline preload="none" aria-label="${esc(b.alt)}" poster="${safeURL(b.poster)}"><source src="${safeURL(b.src)}" type="video/mp4"></video></div>${caption(b.caption)}</figure>`;
   const renderers = {
+    video: b => videoBlock(b, false),
+    'device-video': b => videoBlock(b, true),
     intro: (b, p, name) => {
       const facts = b.facts || {};
       const details = b.text || Object.keys(facts).length ? `<div class="intro-detail"><div class="block-copy">${paragraphs(b.text)}</div>${Object.keys(facts).length ? `<dl class="block-facts">${Object.entries(facts).map(([key, value]) => `<div><dt>[${esc(key)}]</dt><dd>${esc(Array.isArray(value) ? value.join(', ') : value)}</dd></div>`).join('')}</dl>` : ''}</div>` : '';
@@ -44,6 +47,23 @@ window.PortfolioBlocks = (() => {
   }
   function bind(root) {
     const cleanups = [];
+    root.querySelectorAll('video[data-visibility-play]').forEach(video => {
+      const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
+      let visible = false;
+      const sync = () => {
+        video.controls = motion.matches || !('IntersectionObserver' in window);
+        if (!motion.matches && visible && !document.hidden) video.play().catch(() => {});
+        else video.pause();
+      };
+      const observer = 'IntersectionObserver' in window ? new IntersectionObserver(entries => {
+        visible = entries[0].intersectionRatio >= .5; sync();
+      }, {threshold:[0,.5,1]}) : null;
+      observer?.observe(video);
+      motion.addEventListener('change', sync);
+      document.addEventListener('visibilitychange', sync);
+      sync();
+      cleanups.push(() => {observer?.disconnect();motion.removeEventListener('change',sync);document.removeEventListener('visibilitychange',sync);video.pause();});
+    });
     root.querySelectorAll('.block-strip').forEach(strip => {
       const viewport = strip.querySelector('.strip-viewport');
       const previous = strip.querySelector('[data-strip-step="-1"]');

@@ -164,3 +164,14 @@ a.block-chip:hover{border-color:var(--project-accent);color:var(--project-accent
 .strip-track figure:has(.is-compact){align-self:center}
 .strip-track .block-media-surface.is-compact{width:min(760px,80vw);height:auto;max-width:100%;background:transparent}
 .strip-track .is-compact img{width:100%;height:auto;max-width:100%}
+
+/* Bloom videos retain the page layout; only the prototype has a tablet frame. */
+.block-video{margin-inline:0}
+.block-video figcaption{text-align:center;margin-top:12px}
+.wide-video-frame{width:100%;background:#eee7e6}
+.wide-video-frame video{display:block;width:100%;aspect-ratio:16/9;object-fit:contain}
+.tablet-frame{width:min(840px,100%);margin-inline:auto;padding:18px;border-radius:32px;background:#2a1a24;box-shadow:0 16px 42px #2a1a2426}
+.tablet-frame video{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:17px;background:#eee7e6}
+.post-opening>.block-video:first-child{margin-top:-10vh}
+.post-opening .block-row:has(+ .block-video){margin-bottom:6vh}
+@media(max-width:700px){.tablet-frame{padding:11px;border-radius:23px}.tablet-frame video{border-radius:13px}}

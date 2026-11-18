@@ -102,36 +102,31 @@ window.PORTFOLIO_PROJECTS = [
     "openingScreen": true
   },
   {
-    "title": "Bloom",
+    "title": "Feedback Garden",
     "category": "design",
-    "tag": "Interactive installation",
+    "tag": "Research & interaction design",
     "art": "garden",
     "accent": "#486543",
     "id": "feedback-garden",
     "blocks": [
       {
         "type": "intro",
-        "title": "Bloom",
-        "tag": "Interactive installation"
+        "title": "Feedback Garden",
+        "tag": "Research & interaction design"
       },
       {
         "type": "row",
         "label": "Context",
         "paragraphs": [
-          "Museums collect very little visitor feedback. Comment cards and exit surveys are easy to walk past and feel out of place in a quiet exhibition. Bloom is an interactive installation where a visitor answers one quick question and the answer grows into a flower in a shared garden, projected across the museum’s walls and floors."
+          "Museums collect very little visitor feedback. Comment cards and exit surveys are easy to walk past and feel out of place in a quiet exhibition. Feedback Garden is an interactive installation, which we called Bloom, where a visitor answers one quick question and the answer grows into a flower in a shared garden, projected across the museum’s walls and floors."
         ]
       },
       {
-        "type": "media-strip",
-        "items": [
-          {
-            "type": "video",
-            "src": null,
-            "alt": "Bloom concept video showing the installation at full scale.",
-            "caption": "Concept video: how Bloom could look at full scale.",
-            "placeholder": true
-          }
-        ]
+        "type": "video",
+        "src": "/images/bloom/concept.mp4",
+        "poster": "/images/bloom/video-placeholder.svg",
+        "alt": "Bloom concept video",
+        "caption": "Concept video: how Bloom could look at full scale."
       },
       {
         "type": "highlight",
@@ -146,21 +141,21 @@ window.PORTFOLIO_PROJECTS = [
         "items": [
           {
             "type": "image",
-            "src": null,
+            "src": "/images/bloom/process-1.png",
             "alt": "Early version: feedback at every artwork",
             "caption": "Early version: feedback at every artwork",
             "placeholder": true
           },
           {
             "type": "image",
-            "src": null,
+            "src": "/images/bloom/process-2.png",
             "alt": "Revised version: one reflection at the end of the visit",
             "caption": "Revised version: one reflection at the end of the visit",
             "placeholder": true
           },
           {
             "type": "image",
-            "src": null,
+            "src": "/images/bloom/process-3.png",
             "alt": "The garden view",
             "caption": "The garden view",
             "placeholder": true
@@ -170,9 +165,9 @@ window.PORTFOLIO_PROJECTS = [
       {
         "type": "highlight",
         "label": "Insight",
-        "text": "People wanted something quick and visual, not a form. Nearly everyone chose an interactive screen, and nobody wanted to write a comment.",
+        "text": "People wanted something quick and visual, not a form. Nearly everyone chose an interactive screen and nobody wanted to write a comment.",
         "paragraphs": [
-          "Most users had never given museum feedback and found it boring. So Bloom asks one question with four ready-made answers: loved it, interesting, it was okay, not for me. Each answer grows a different flower and even a negative answer gets a flower that belongs in the garden."
+          "Most respondents had never given museum feedback and found it boring. So Bloom asks one question with four ready-made answers: loved it, interesting, it was okay, not for me. Each answer grows a different flower and even a negative answer gets a flower that belongs in the garden."
         ]
       },
       {
@@ -183,15 +178,10 @@ window.PORTFOLIO_PROJECTS = [
         ]
       },
       {
-        "type": "media-strip",
-        "items": [
-          {
-            "type": "video",
-            "src": null,
-            "alt": "Bloom tablet prototype in use.",
-            "placeholder": true
-          }
-        ]
+        "type": "device-video",
+        "src": "/images/bloom/tablet.mp4",
+        "poster": "/images/bloom/video-placeholder.svg",
+        "alt": "Bloom tablet prototype in use"
       }
     ],
     "openingScreen": true
