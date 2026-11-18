@@ -102,89 +102,99 @@ window.PORTFOLIO_PROJECTS = [
     "openingScreen": true
   },
   {
-    "title": "Feedback Garden",
+    "title": "Bloom",
     "category": "design",
-    "tag": "Research & interaction design",
+    "tag": "Interactive installation",
     "art": "garden",
     "accent": "#486543",
     "id": "feedback-garden",
     "blocks": [
       {
         "type": "intro",
-        "title": "Feedback Garden",
-        "tag": "Research & interaction design",
-        "text": "Turning a quick response into a shared digital garden.",
-        "facts": {
-          "role": "Duo project · Research & web prototyping",
-          "timeframe": "Semester 7 · 2026",
-          "tools": [
-            "Interviews & surveys",
-            "Usability testing",
-            "HTML / CSS",
-            "JavaScript / SVG"
-          ],
-          "client": "Academic project"
-        }
+        "title": "Bloom",
+        "tag": "Interactive installation"
       },
       {
         "type": "row",
         "label": "Context",
         "paragraphs": [
-          "How can museum visitors give quick, anonymous feedback while staying immersed in their visit?",
-          "Turning a quick response into a shared digital garden."
+          "Museums collect very little visitor feedback. Comment cards and exit surveys are easy to walk past and feel out of place in a quiet exhibition. Bloom is an interactive installation where a visitor answers one quick question and the answer grows into a flower in a shared garden, projected across the museum’s walls and floors."
+        ]
+      },
+      {
+        "type": "media-strip",
+        "items": [
+          {
+            "type": "video",
+            "src": null,
+            "alt": "Bloom concept video showing the installation at full scale.",
+            "caption": "Concept video: how Bloom could look at full scale.",
+            "placeholder": true
+          }
+        ]
+      },
+      {
+        "type": "highlight",
+        "label": "Process",
+        "text": "How can an interactive installation make museum visitors provide quick and meaningful feedback while remaining part of the museum experience?",
+        "paragraphs": [
+          "I followed the Double Diamond. I explored different contexts, from trains to museums and surveyed people before designing anything."
+        ]
+      },
+      {
+        "type": "media-strip",
+        "items": [
+          {
+            "type": "image",
+            "src": null,
+            "alt": "Early version: feedback at every artwork",
+            "caption": "Early version: feedback at every artwork",
+            "placeholder": true
+          },
+          {
+            "type": "image",
+            "src": null,
+            "alt": "Revised version: one reflection at the end of the visit",
+            "caption": "Revised version: one reflection at the end of the visit",
+            "placeholder": true
+          },
+          {
+            "type": "image",
+            "src": null,
+            "alt": "The garden view",
+            "caption": "The garden view",
+            "placeholder": true
+          }
+        ]
+      },
+      {
+        "type": "highlight",
+        "label": "Insight",
+        "text": "People wanted something quick and visual, not a form. Nearly everyone chose an interactive screen, and nobody wanted to write a comment.",
+        "paragraphs": [
+          "Most users had never given museum feedback and found it boring. So Bloom asks one question with four ready-made answers: loved it, interesting, it was okay, not for me. Each answer grows a different flower and even a negative answer gets a flower that belongs in the garden."
         ]
       },
       {
         "type": "row",
-        "label": "Research",
+        "label": "Design & testing",
         "paragraphs": [
-          "This page will introduce the research questions and the people or sources involved.",
-          "Add the strongest insight here, explaining how it helped define the direction of the project."
-        ],
-        "draft": true,
-        "leadBold": null
+          "Testers asked for a QR code alongside the screen and for flowers that are easier to tell apart. Feedback from peers and teachers led to the biggest change. Bloom now asks once, at the end of the visit, because asking at every artwork would repeat the interruption we wanted to remove."
+        ]
       },
       {
-        "type": "row",
-        "label": "Ideas",
-        "paragraphs": [
-          "Show the early concepts and the alternatives considered.",
-          "Explain why one direction was selected, and what questions still needed to be tested."
-        ],
-        "draft": true,
-        "leadBold": null
-      },
-      {
-        "type": "row",
-        "label": "Design",
-        "paragraphs": [
-          "Explain one important design decision and the need it addresses.",
-          "Add sketches, wireframes or a prototype image to show how the idea developed."
-        ],
-        "draft": true,
-        "leadBold": null
-      },
-      {
-        "type": "row",
-        "label": "Testing",
-        "paragraphs": [
-          "Describe who tried the concept and what the test was designed to learn.",
-          "Add an observation and the specific change made in response."
-        ],
-        "draft": true,
-        "leadBold": null
-      },
-      {
-        "type": "row",
-        "label": "Result",
-        "paragraphs": [
-          "Summarise the final deliverable and what was demonstrated or validated.",
-          "Close with one lesson and a practical next step. Replace this draft with the final project reflection."
-        ],
-        "draft": true,
-        "leadBold": null
+        "type": "media-strip",
+        "items": [
+          {
+            "type": "video",
+            "src": null,
+            "alt": "Bloom tablet prototype in use.",
+            "placeholder": true
+          }
+        ]
       }
-    ]
+    ],
+    "openingScreen": true
   },
   {
     "title": "Concorde",
