@@ -86,7 +86,8 @@ window.PORTFOLIO_PROJECTS = [
             "type": "image",
             "src": "assets/cape/library-tab-banner.webp",
             "alt": "Library tab alongside Available templates, Collections, Drafts and Bin, beneath the blue Demo environment banner.",
-            "caption": "Library tab and demo banner"
+            "caption": "Library tab and demo banner",
+            "compact": true
           }
         ]
       },
