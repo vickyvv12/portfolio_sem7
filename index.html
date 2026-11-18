@@ -385,7 +385,7 @@ body.project-view main{padding:0 3vw 80px;margin:0 auto}
 <button class="contact-close" aria-label="Close contact">×</button></dialog>
 <script>
 const projects=[
-{title:'Cape',category:'design',tag:'UX research & template design',date:'Sep 2025 – Jan 2026',role:'Template Designer Intern',tools:['UX research','Usability testing','Heuristic evaluation','Template design'],summary:'Making a starter template library easier to find and explore.',challenge:'Cape’s Template Builder helps clients create reusable content. My internship project investigated how its predefined library could better support demos and onboarding.',work:['Worked directly with clients and created templates tailored to their needs.','Evaluated 22 predefined templates, reviewed competitors and interviewed an internal stakeholder.','Conducted usability testing and identified that first-time users struggled to find the library.','Designed and tested a welcome screen, direct library link and clearer navigation.'],outcome:'Delivered a tested prototype and research-backed recommendations for discoverability, naming and reuse. These were proposals for future development.',art:'cape'},
+{title:'Starter Template Library',category:'design',tag:'Internship · Cape',date:'Sep 2025 – Jan 2026',role:'Template Designer Intern',tools:['UX research','Usability testing','Heuristic evaluation','Template design'],summary:'Making a starter template library easier to find and explore.',challenge:'Cape’s Template Builder helps clients create reusable content. My internship project investigated how its predefined library could better support demos and onboarding.',work:['Worked directly with clients and created templates tailored to their needs.','Evaluated 22 predefined templates, reviewed competitors and interviewed an internal stakeholder.','Conducted usability testing and identified that first-time users struggled to find the library.','Designed and tested a welcome screen, direct library link and clearer navigation.'],outcome:'Delivered a tested prototype and research-backed recommendations for discoverability, naming and reuse. These were proposals for future development.',art:'cape'},
 {title:'Feedback Garden',category:'design',tag:'Research & interaction design',date:'Semester 7 · 2026',role:'Duo project · Research & web prototyping',tools:['Interviews & surveys','Usability testing','HTML / CSS','JavaScript / SVG'],summary:'Turning a quick response into a shared digital garden.',challenge:'How can museum visitors give quick, anonymous feedback while staying immersed in their visit?',work:['Conducted interviews, a survey and usability testing.','Iterated on the concept and design with my teammate using the findings.','Built a web prototype where four feedback choices generate distinct SVG flowers.','Created the response, confirmation and shared garden screens.'],outcome:'Produced an interactive prototype that visualises visitor responses as flowers. Testing informed changes to the flower differences and the journey.',art:'garden'},
 {title:'Concorde',category:'design',tag:'Interactive storytelling',date:'Semester 7 · 2026',role:'Duo project · Research & front-end contribution',tools:['Audience research','Personas','Storytelling','Front-end development'],summary:'A journey from boarding in London to landing in New York.',challenge:'Create an interactive tribute that introduces an iconic design through an engaging visual story.',work:['Researched Concorde’s design, history and passenger experience.','Created audience personas and used a cabin crew interview to inform the guided journey.','Helped shape the experience around moments in a transatlantic flight.','Contributed to front-end development, including personalised boarding and completion screens.'],outcome:'Built a guided website connecting aircraft history with a personalised passenger experience.',art:'plane'},
 {title:'Companion on the Road',category:'design',tag:'UX/UI · Partout / CBR',date:'Semester 3 · 2024',role:'Independently completed client assignment',tools:['Double Diamond','Interviews & surveys','Figma','Usability testing'],summary:'Helping young drivers prepare with more confidence.',challenge:'Partout’s brief asked for a digital proof of concept to support 16–19-year-olds preparing for their driving exam.',work:['Planned the project and defined research and interview questions.','Analysed interviews and surveys that pointed to anxiety and feeling underprepared.','Created wireframes and a Figma app prototype.','Refined the concept after user tests and client feedback, then presented recommendations.'],outcome:'Delivered an app concept and advice report grounded in learner needs. The concept was intended to support preparation; exam outcomes were not measured.',art:'road'},
@@ -466,6 +466,35 @@ projects.forEach((p,i)=>{
  p.context=[p.challenge,p.summary];
  p.phases=phaseSequences[i].map(label=>({label,text:phaseCopy[label],draft:true,media:label===(p.category==='security'?'Approach':'Design')?p.media:[]}));
 });
+
+const capeProject=projects.find(p=>p.art==='cape');
+capeProject.context=[
+ 'Cape’s Template Builder helps teams create and reuse digital content. During my Template Designer internship, I explored how its predefined starter library could better support clients and potential clients as they tried the platform, with templates flexible enough to work across industries and formats.',
+ 'Alongside this research project, I worked directly with clients to create templates for their needs and designed templates for the starter library itself. This connected the research to everyday template production and the practical needs of both clients and Cape’s internal teams.'
+];
+capeProject.phases=[
+ {label:'Approach',text:[
+  'I used CMD research and design methods within the Double Diamond framework, moving from understanding the problem to defining priorities, developing a prototype and delivering advice.',
+  'The process combined desk research, evaluation, a stakeholder interview and usability testing. I used these methods to connect principles of modularity and reuse with the way first-time users explored Cape’s platform.'
+ ],media:[]},
+ {label:'Discover',text:[
+  'I began with a project plan that set out the scope, research questions and deliverables. A competitive analysis of tools including Canva and Figma explored how other platforms support modular design, template reuse and scalability.',
+  'A literature study brought together academic sources and internal documentation on modularity, usability and design systems. These activities established a foundation for evaluating Cape’s library in its own product context.'
+ ],media:[]},
+ {label:'Define',text:[
+  'I evaluated 22 predefined templates for usability, structure, scalability and visual clarity. A stakeholder interview added the business perspective: which industries mattered, what internal teams needed, and how templates supported demos and onboarding.',
+  'User testing brought discoverability into focus. The templates were understandable once users reached them, but finding the library was a barrier. This shifted the design priorities towards clearer access and guidance, alongside the quality and consistency of the templates.'
+ ],media:[]},
+ {label:'Develop',text:[
+  'I prepared a user persona and test scenario to examine how first-time users found and explored the library. I analysed the observations and developed a prototype with a clearer route to the Template Library, a welcome screen and navigation improvements.',
+  'I refined the prototype through iteration and tested the proposed changes. The aim was to address the usability and clarity issues identified in the research, while making the library easier to explore during demos and onboarding.'
+ ],media:[{type:'illustration',caption:'Illustrative template-library graphic. Project screenshots and prototype images will be added here.'}]},
+ {label:'Deliver',text:[
+  'I brought the competitive analysis, literature study, heuristic evaluation, stakeholder interview and user testing together in a research report. An advice report translated those findings into recommendations for the library’s structure, discoverability, scalability and user experience.',
+  'The final outcome combined a tested prototype and research-backed advice with the templates I created during the internship. The recommendations provided a direction for future development; their effect on platform adoption was not measured.'
+ ],media:[]}
+];
+
 function mediaMarkup(item,p){
  if(item.type==='video')return `<video controls playsinline preload="metadata" aria-label="${escapeHtml(item.alt||p.title+' video')}" ${item.poster?'poster="'+escapeHtml(item.poster)+'"':''}><source src="${escapeHtml(item.src)}">Your browser does not support this video.</video>`;
  if(item.type==='image')return `<img src="${escapeHtml(item.src)}" alt="${escapeHtml(item.alt||p.title+' project image')}" loading="lazy" decoding="async">`;
@@ -500,7 +529,7 @@ function renderProject(i){
 function renderRoute(){
  const requested=new URLSearchParams(location.search).get('project');
  if(!requested){renderHome();return;}
- const i=projects.findIndex(p=>slug(p)===requested);
+ const i=projects.findIndex(p=>slug(p)===requested||(p.art==='cape'&&requested==='cape'));
  if(i>=0)renderProject(i);
  else{activeProject=null;document.body.classList.add('project-view');document.title='Project not found — Viktoria Valkova';main.innerHTML='<article class="project-page"><h1 tabindex="-1">Project not found</h1><a href="./index.html">Back to projects</a></article>';}
 }
