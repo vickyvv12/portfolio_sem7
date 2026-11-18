@@ -509,29 +509,21 @@ projects.forEach((p,i)=>{
 const capeProject=projects.find(p=>p.art==='cape');
 capeProject.accent='#814057';
 capeProject.context=[
- 'Cape’s Template Builder helps teams create and reuse digital content. During my Template Designer internship, I explored how its predefined starter library could better support clients and potential clients as they tried the platform, with templates flexible enough to work across industries and formats.',
- 'Alongside this research project, I worked directly with clients to create templates for their needs and designed templates for the starter library itself. This connected the research to everyday template production and the practical needs of both clients and Cape’s internal teams.'
+ 'Cape’s Template Builder helps teams create and reuse digital content. Cape staff use ready-made templates to show prospective clients what the tool can do during sales demos. Once clients have access to the platform, they can explore the library themselves during training.',
+ 'During my internship, I designed templates for clients and for the starter library. My research project focused on how the library could better support people using the Template Builder for the first time.'
 ];
 capeProject.phases=[
- {label:'Approach',text:[
-  'I used CMD research and design methods within the Double Diamond framework, moving from understanding the problem to defining priorities, developing a prototype and delivering advice.',
-  'The process combined desk research, evaluation, a stakeholder interview and usability testing. I used these methods to connect principles of modularity and reuse with the way first-time users explored Cape’s platform.'
+ {label:'Research',text:[
+  'I reviewed 22 templates to see how consistently they were organised and how easy they were to adapt. I also looked at how tools like Canva and Figma support template reuse and interviewed a Cape team member to understand how the library fits into demos and training.',
+  'The usability tests changed my focus. First-time users struggled to find the library. Once they opened a template, the editable fields helped them understand what they could change. Participants also said that trying the templates themselves helped them understand what the tool could do. I used those findings to focus my design on helping people find the library and get started.'
  ],media:[]},
- {label:'Discover',text:[
-  'I began with a project plan that set out the scope, research questions and deliverables. A competitive analysis of tools including Canva and Figma explored how other platforms support modular design, template reuse and scalability.',
-  'A literature study brought together academic sources and internal documentation on modularity, usability and design systems. These activities established a foundation for evaluating Cape’s library in its own product context.'
- ],media:[]},
- {label:'Define',text:[
-  'I evaluated 22 predefined templates for usability, structure, scalability and visual clarity. A stakeholder interview added the business perspective: which industries mattered, what internal teams needed, and how templates supported demos and onboarding.',
-  'User testing brought discoverability into focus. The templates were understandable once users reached them, but finding the library was a barrier. This shifted the design priorities towards clearer access and guidance, alongside the quality and consistency of the templates.'
- ],media:[]},
- {label:'Develop',text:[
-  'I prepared a user persona and test scenario to examine how first-time users found and explored the library. I analysed the observations and developed a prototype with a clearer route to the Template Library, a welcome screen and navigation improvements.',
-  'I refined the prototype through iteration and tested the proposed changes. The aim was to address the usability and clarity issues identified in the research, while making the library easier to explore during demos and onboarding.'
+ {label:'Design',text:[
+  'I designed a demo flow that gave first-time users a clear starting point. A welcome screen linked directly to the library, and a short message inside explained what the templates were for. I kept the existing grid and filters so users could browse and choose a template once they arrived.',
+  'I also proposed a practice environment where prospective clients could try editing templates without affecting live projects.'
  ],media:[{type:'illustration',caption:'Illustrative template-library graphic. Project screenshots and prototype images will be added here.'}]},
- {label:'Deliver',text:[
-  'I brought the competitive analysis, literature study, heuristic evaluation, stakeholder interview and user testing together in a research report. An advice report translated those findings into recommendations for the library’s structure, discoverability, scalability and user experience.',
-  'The final outcome combined a tested prototype and research-backed advice with the templates I created during the internship. The recommendations provided a direction for future development; their effect on platform adoption was not measured.'
+ {label:'Final outcome',leadBold:'All five participants in the prototype test reached the library through the welcome screen without extra guidance.',text:[
+  'All five participants in the prototype test reached the library through the welcome screen without extra guidance. Several suggested making the welcome pop-up smaller, which gave me a clear direction for the next iteration.',
+  'I delivered a tested prototype and recommendations for making the library easier to find and explore during demos and onboarding.'
  ],media:[]}
 ];
 
@@ -552,7 +544,7 @@ function renderProject(i){
  main.innerHTML=`<article class="vertical-project" aria-label="${p.title} case study">
  <div class="vertical-hero"><h1 tabindex="-1" style="view-transition-name:project-${slug(p)}">${p.title}</h1><span class="vertical-tag">[${p.tag}]</span></div>
  <section class="vertical-row reveal" aria-label="Context"><h2>[Context]</h2><div class="vertical-copy">${p.context.map(text=>'<p>'+escapeHtml(text)+'</p>').join('')}</div></section>
- ${p.phases.map((phase,n)=>`<section class="vertical-row reveal" aria-label="${escapeHtml(phase.label)}"><h2>[${escapeHtml(phase.label)}]</h2><div class="vertical-copy">${phase.draft?'<span class="vertical-draft">Draft content placeholder</span>':''}${phase.text.map(text=>'<p>'+escapeHtml(text)+'</p>').join('')}</div></section>${galleryMarkup(phase.media,p,n)}`).join('')}
+ ${p.phases.map((phase,n)=>`<section class="vertical-row reveal" aria-label="${escapeHtml(phase.label)}"><h2>[${escapeHtml(phase.label)}]</h2><div class="vertical-copy">${phase.draft?'<span class="vertical-draft">Draft content placeholder</span>':''}${phase.text.map((text,n)=>'<p>'+(n===0&&phase.leadBold?'<strong>'+escapeHtml(phase.leadBold)+'</strong>'+escapeHtml(text.slice(phase.leadBold.length)):escapeHtml(text))+'</p>').join('')}</div></section>${galleryMarkup(phase.media,p,n)}`).join('')}
  <nav class="vertical-end reveal" aria-label="Project navigation"><a class="vertical-next" href="${projectUrl(next)}"><span>Next project</span><strong>${next.title} <span aria-hidden="true">→</span></strong><small>[${next.tag}]</small></a><a class="vertical-back" href="./index.html">Back to projects</a></nav></article>`;
  main.querySelectorAll('[data-gallery]').forEach(gallery=>{
   const items=p.phases[Number(gallery.dataset.gallery)].media;if(items.length<2)return;
