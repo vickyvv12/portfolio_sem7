@@ -13,9 +13,9 @@ window.PortfolioBlocks = (() => {
     const src = safeURL(item.src);
     if (item.placeholder || !src) return `<div class="block-media-surface is-placeholder" role="img" aria-label="${esc(item.alt || 'Missing project image')}"></div>`;
     const note = item.placeholder ? `<span class="placeholder-note">${item.type === 'video' ? 'Video' : 'Image'} to be added</span>` : '';
-    if (item.type === 'video' && !src) return `<div class="block-media-surface"><img src="${safeURL(item.poster)}" alt="${esc(item.alt || 'Video placeholder')}" loading="lazy" decoding="async" draggable="false">${note}</div>`;
+    if (item.type === 'video' && !src) return `<div class="block-media-surface${item.compact ? ' is-compact' : ''}"><img src="${safeURL(item.poster)}" alt="${esc(item.alt || 'Video placeholder')}" loading="lazy" decoding="async" draggable="false">${note}</div>`;
     if (item.type === 'video') return `<div class="block-media-surface"><video controls playsinline preload="none" ${item.muted ? 'muted' : ''} ${item.loop ? 'loop' : ''} ${item.autoplay ? 'autoplay' : ''} aria-label="${esc(item.alt || 'Project video')}" ${item.poster ? `poster="${safeURL(item.poster)}"` : ''}><source src="${src}">Your browser does not support this video.</video></div>`;
-    return `<div class="block-media-surface"><img src="${src}" alt="${esc(item.alt || 'Project image')}" loading="lazy" decoding="async" draggable="false">${note}</div>`;
+    return `<div class="block-media-surface${item.compact ? ' is-compact' : ''}"><img src="${src}" alt="${esc(item.alt || 'Project image')}" loading="lazy" decoding="async" draggable="false">${note}</div>`;
   }
   const caption = text => text ? `<figcaption>${esc(text)}</figcaption>` : '';
   const renderers = {
