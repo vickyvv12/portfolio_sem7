@@ -84,24 +84,21 @@ window.PORTFOLIO_PROJECTS = [
         "items": [
           {
             "type": "image",
-            "src": null,
-            "alt": "Prototype v1 (low fidelity, whole image)",
-            "caption": "Prototype v1 (low fidelity, whole image)",
-            "placeholder": true
+            "src": "assets/cape/prototype-v1.webp",
+            "alt": "Early Cape demo prototype showing the welcome message over the template library, with Explore template library and Skip controls.",
+            "caption": "Prototype v1"
           },
           {
             "type": "image",
-            "src": null,
-            "alt": "welcome message cutout",
-            "caption": "welcome message cutout",
-            "placeholder": true
+            "src": "assets/cape/welcome-message.webp",
+            "alt": "Revised welcome message explaining the safe demo environment, with one Explore template library button and no Skip option.",
+            "caption": "Welcome message"
           },
           {
             "type": "image",
-            "src": null,
-            "alt": "library tab and banner cutouts",
-            "caption": "library tab and banner cutouts",
-            "placeholder": true
+            "src": "assets/cape/library-tab-banner.webp",
+            "alt": "Library tab alongside Available templates, Collections, Drafts and Bin, beneath the blue Demo environment banner.",
+            "caption": "Library tab and demo banner"
           }
         ]
       },
