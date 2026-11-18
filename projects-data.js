@@ -17,77 +17,43 @@ window.PORTFOLIO_PROJECTS = [
       {
         "type": "intro",
         "title": "Starter Template Library",
-        "tag": "Internship · Cape",
-        "facts": {
-          "role": "Template Designer Intern",
-          "timeframe": "Sep 2025 – Jan 2026",
-          "tools": [
-            "Cape Template Builder",
-            "Figma",
-            "UX research",
-            "usability testing"
-          ]
-        }
+        "tag": "Internship · Cape"
       },
       {
         "type": "row",
         "label": "Context",
         "paragraphs": [
-          "Cape's Template Builder helps teams create and reuse digital content. Cape staff use ready-made templates to show prospective clients what the tool can do in sales demos. During my internship I designed templates for clients and for the starter library and researched how the library could better support people using the Template Builder for the first time."
+          "Cape's Template Builder helps teams create and reuse digital content. Cape staff use ready-made templates to show prospective clients what the tool can do in sales demos and clients can explore the library themselves during training. During my internship I designed templates for clients and for the starter library and researched how the library could better support people using the Template Builder for the first time."
         ]
       },
       {
         "type": "highlight",
-        "label": "Question",
-        "text": "How can modular template design in Cape's Template Builder be optimised to ensure usability and scalability for clients in creative automation?"
-      },
-      {
-        "type": "row",
         "label": "Approach",
+        "text": "How can modular template design in Cape's Template Builder be optimised to ensure usability and scalability for clients in creative automation?",
         "paragraphs": [
-          "I worked in the Double Diamond, using CMD research and design methods. After feedback from my company mentor, I narrowed my research questions: the library would help clients during onboarding, not serve internal use or reuse. That kept the project focused on one audience and one problem."
-        ]
-      },
-      {
-        "type": "chips",
-        "label": "Research methods",
-        "items": [
-          {
-            "text": "Literature study",
-            "href": null
-          },
-          {
-            "text": "Competitive analysis",
-            "href": null
-          },
-          {
-            "text": "Stakeholder interview",
-            "href": null
-          },
-          {
-            "text": "Heuristic evaluation",
-            "href": null
-          },
-          {
-            "text": "User persona",
-            "href": null
-          },
-          {
-            "text": "Usability testing",
-            "href": null
-          }
+          "I worked in the Double Diamond, using CMD research and design methods. After feedback from my company mentor, I narrowed my research questions: the library would help clients during onboarding, not serve internal use or reuse."
+        ],
+        "chips": [
+          "Literature study",
+          "Competitive analysis",
+          "Stakeholder interview",
+          "Heuristic evaluation",
+          "Usability testing"
         ]
       },
       {
         "type": "highlight",
         "label": "Insight",
-        "text": "The templates themselves were strong. The real barrier was getting to the library: first-time users couldn't find it, and they preferred trying templates to watching a demo."
+        "text": "The templates themselves were strong. The real barrier was getting to the library: first-time users couldn't find it and they preferred trying templates themselves to watching a demo.",
+        "paragraphs": [
+          "A heuristic evaluation of the library's templates showed a strong, scalable structure, especially in the newer ones. The first user test then showed that the problem sat around the templates, not in them."
+        ]
       },
       {
         "type": "row",
-        "label": "Prototype iterations",
+        "label": "Design & testing",
         "paragraphs": [
-          "I prototyped in three rounds. The low-fidelity version explored layout and flow, the high-fidelity version added a welcome message and a \"demo environment\" banner, and the final version applied user test feedback. The biggest change was making the library its own tab in the Templates section, next to Drafts and Collections, with a short banner explaining what it is."
+          "I prototyped in three rounds, from low fidelity to a final version shaped by user testing. The biggest change was making the library its own tab next to Drafts and Collections, with a welcome message and a short banner explaining it. In the last test, first-time users, given no guidance, all reached the library through the welcome message. Their feedback led to two changes: a smaller pop-up and no skip button."
         ]
       },
       {
@@ -117,17 +83,27 @@ window.PORTFOLIO_PROJECTS = [
         ]
       },
       {
-        "type": "row",
-        "label": "Testing",
-        "paragraphs": [
-          "I tested the final flow with people who had never used the Template Builder, giving them no guidance. The welcome message took them to the library quickly and I saw no problems with the layout or the filters."
+        "type": "numbers",
+        "items": [
+          {
+            "value": "5",
+            "caption": "first-time users tested"
+          },
+          {
+            "value": "5 / 5",
+            "caption": "reached the library through the welcome message"
+          },
+          {
+            "value": "2",
+            "caption": "changes made after testing"
+          }
         ]
       },
       {
         "type": "row",
         "label": "Result",
         "paragraphs": [
-          "All five participants reached the library through the welcome screen without extra guidance. My advice to Cape was a shared sandbox with a single entry point and temporary sessions that reset automatically, separate from production, so potential clients can explore templates safely during demos and onboarding."
+          "My advice to Cape was a shared sandbox with a single entry point and temporary sessions that reset automatically, separate from production, so potential clients can explore templates safely during demos and onboarding."
         ]
       },
       {
@@ -150,14 +126,11 @@ window.PORTFOLIO_PROJECTS = [
           {
             "title": "User test analysis",
             "href": null
-          },
-          {
-            "title": "Prototype test analysis",
-            "href": null
           }
         ]
       }
-    ]
+    ],
+    "openingScreen": true
   },
   {
     "title": "Feedback Garden",
