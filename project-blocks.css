@@ -101,4 +101,27 @@ a.block-chip:hover{border-color:var(--project-accent);color:var(--project-accent
 .numbers-grid dt{font-size:clamp(42px,5.2vw,72px)}
 @media(max-width:900px){.process-diagram{grid-template-columns:repeat(2,minmax(0,1fr))}.process-diagram li::after{display:none}}
 @media(max-width:700px){.process-diagram{grid-template-columns:1fr;gap:14px}.process-diagram li{padding:20px}.numbers-grid dt{font-size:58px}}
+/* Every labelled block shares the same two-column alignment. */
+.block-row{align-items:start}
+.block-row>.block-label{margin:0;padding-top:4px;align-self:start}
+.block-chips>.block-label{padding-top:9px}
+.block-highlight .block-copy{max-width:68ch}
+.block-highlight .block-copy p{max-width:none;margin:0}
+.block-numbers .numbers-grid{margin:0}
+.block-compare .compare-copy{margin-left:0}
+.block-row .block-offset{margin-left:0}
+.intro-detail>.block-copy:empty{display:none}
+.intro-detail .block-facts{margin-top:0}
+.content-block.block-row:has(+ .block-strip){margin-bottom:3vh}
+.block-media-surface.is-placeholder{height:min(24vh,180px);max-height:30vh;width:100%;background:#eee7e6;border:1px solid #dfd5d6;border-radius:3px}
+.strip-track .block-media-surface{height:45vh}
+.strip-track .block-media-surface.is-placeholder{height:min(24vh,180px);max-height:30vh;width:280px;max-width:80vw}
+.compare-grid img,.compare-grid video{aspect-ratio:auto;height:auto;object-fit:contain}
+@media(max-width:700px){
+ .block-row>.block-label,.block-chips>.block-label{padding-top:0}
+ .block-highlight .block-copy p{font-size:1.6rem}
+ .strip-track .block-media-surface{height:36vh}
+ .strip-track .block-media-surface.is-placeholder{height:min(24vh,160px);width:100%}
+ .block-numbers>.block-label,.block-compare>.block-label{margin:0}
+}
 @media(prefers-reduced-motion:reduce){.strip-progress span{transition:none}.strip-viewport{scroll-behavior:auto}}
