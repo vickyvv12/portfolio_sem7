@@ -159,3 +159,8 @@ a.block-chip:hover{border-color:var(--project-accent);color:var(--project-accent
  .strip-track .block-media-surface{max-width:none}
  .strip-track img,.strip-track video{max-width:none}
 }
+
+/* Wide interface cutouts stay readable without being enlarged to slide height. */
+.strip-track figure:has(.is-compact){align-self:center}
+.strip-track .block-media-surface.is-compact{width:min(760px,80vw);height:auto;max-width:100%;background:transparent}
+.strip-track .is-compact img{width:100%;height:auto;max-width:100%}
