@@ -40,13 +40,34 @@ window.PortfolioBlocks = (() => {
   function render(p, name) {
     const blocks = p.blocks || [];
     const draw = (b, i) => renderers[b.type]?.(b, p, name, i) || '';
-    if (p.openingScreen && blocks[0]?.type === 'intro' && blocks[1]?.type === 'row') {
-      return `<div class="project-opening">${draw(blocks[0], 0)}${draw(blocks[1], 1).replace(' reveal', '')}</div><div class="post-opening">${blocks.slice(2).map((b, i) => draw(b, i + 2)).join('')}</div>`;
+    if (blocks[0]?.type === 'intro' && blocks[1]?.type === 'row') {
+      const intro = blocks[0];
+      const fullIntro = draw(intro, 0);
+      const detailStart = fullIntro.indexOf('<div class="intro-detail">');
+      const details = detailStart < 0 ? '' : '<section class="content-block block-details reveal">' + fullIntro.slice(detailStart, -10) + '</section>';
+      return `<div class="project-opening">${draw({...intro, text:null, facts:{}}, 0)}${draw(blocks[1], 1).replace(' reveal', '')}</div><div class="post-opening">${details}${blocks.slice(2).map((b, i) => draw(b, i + 2)).join('')}</div>`;
     }
     return blocks.map(draw).join('');
   }
   function bind(root) {
     const cleanups = [];
+    root.querySelectorAll('.project-opening').forEach(opening => {
+      const title = opening.children[0], context = opening.children[1];
+      const fit = () => {
+        const height = window.innerHeight;
+        const header = document.querySelector('header').getBoundingClientRect().height;
+        const gap = Math.min(176, Math.max(64, height * .16));
+        const preferred = Math.min(144, Math.max(48, height * .12));
+        const minimum = Math.min(64, Math.max(32, height * .06));
+        const bottom = Math.min(42, Math.max(24, height * .04));
+        const available = height - header - bottom - gap - title.getBoundingClientRect().height - context.getBoundingClientRect().height;
+        opening.style.setProperty('--opening-top', Math.max(minimum, Math.min(preferred, available)) + 'px');
+      };
+      const observer = new ResizeObserver(fit);
+      observer.observe(title); observer.observe(context); observer.observe(document.querySelector('header'));
+      window.addEventListener('resize', fit); fit();
+      cleanups.push(() => {observer.disconnect();window.removeEventListener('resize',fit);});
+    });
     root.querySelectorAll('video[data-visibility-play]').forEach(video => {
       const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
       let visible = false;
