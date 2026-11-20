@@ -45,7 +45,9 @@ window.PortfolioBlocks = (() => {
       const fullIntro = draw(intro, 0);
       const detailStart = fullIntro.indexOf('<div class="intro-detail">');
       const details = detailStart < 0 ? '' : '<section class="content-block block-details reveal">' + fullIntro.slice(detailStart, -10) + '</section>';
-      return `<div class="project-opening">${draw({...intro, text:null, facts:{}}, 0)}${draw(blocks[1], 1).replace(' reveal', '')}</div><div class="post-opening">${details}${blocks.slice(2).map((b, i) => draw(b, i + 2)).join('')}</div>`;
+      const attachedMedia = blocks[2]?.type === 'video' ? draw(blocks[2], 2) : '';
+      const followingIndex = attachedMedia ? 3 : 2;
+      return `<div class="project-opening">${draw({...intro, text:null, facts:{}}, 0)}${draw(blocks[1], 1).replace(' reveal', '')}${attachedMedia}</div><div class="post-opening">${details}${blocks.slice(followingIndex).map((b, i) => draw(b, i + followingIndex)).join('')}</div>`;
     }
     return blocks.map(draw).join('');
   }
