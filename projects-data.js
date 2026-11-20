@@ -221,7 +221,10 @@ window.PORTFOLIO_PROJECTS = [
         "chips": [
           "Research Notes",
           "Target Audience V2",
-          "Interviews Analysis",
+          {
+            "text": "Interviews Analysis",
+            "href": "/documents/concorde/interviews-analysis.pdf"
+          },
           "Proof of Concept"
         ]
       },
@@ -232,29 +235,19 @@ window.PORTFOLIO_PROJECTS = [
             "type": "image",
             "src": "/images/concorde/sketch-1a.jpg",
             "caption": "First sketch: the flight scene by scene",
-            "alt": "First sketch: the flight scene by scene",
-            "placeholder": true
-          },
-          {
-            "type": "image",
-            "src": "/images/concorde/sketch-1b.jpg",
-            "caption": "First sketch: the flight scene by scene",
-            "alt": "First sketch: the flight scene by scene",
-            "placeholder": true
+            "alt": "First hand-drawn Concorde journey sketch showing the landing page, aircraft exploration and cabin."
           },
           {
             "type": "image",
             "src": "/images/concorde/sketch-2a.jpg",
             "caption": "Second sketch, with more detail",
-            "alt": "Second sketch, with more detail",
-            "placeholder": true
+            "alt": "Detailed Concorde sketch, first page: boarding pass, aircraft, seating, cockpit and take-off."
           },
           {
             "type": "image",
             "src": "/images/concorde/sketch-2b.jpg",
             "caption": "Second sketch, with more detail",
-            "alt": "Second sketch, with more detail",
-            "placeholder": true
+            "alt": "Detailed Concorde sketch, second page: climb, supersonic flight, cabin exploration and altitude."
           }
         ]
       },
