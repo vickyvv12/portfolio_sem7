@@ -20,6 +20,7 @@ window.PortfolioBlocks = (() => {
   const caption = text => text ? `<figcaption>${esc(text)}</figcaption>` : '';
   const videoBlock = (b, device) => `<figure class="content-block block-video ${device ? 'block-device-video' : 'block-wide-video'} reveal"><div class="${device ? 'tablet-frame' : 'wide-video-frame'}">${safeURL(b.src) ? `<video ${device ? 'data-visibility-play' : 'controls'} muted loop playsinline preload="none" aria-label="${esc(b.alt)}" poster="${safeURL(b.poster)}"><source src="${safeURL(b.src)}" type="video/mp4"></video>` : `<div class="video-placeholder" role="img" aria-label="${esc(b.alt)}"></div>`}</div>${caption(b.caption)}${b.link ? `<div class="video-action">${safeURL(b.link.href) ? `<a href="${safeURL(b.link.href)}" target="_blank" rel="noopener noreferrer">${esc(b.link.text)}</a>` : `<button type="button" disabled>${esc(b.link.text)}</button>`}</div>` : ''}</figure>`;
   const renderers = {
+    'link-button': b => safeURL(b.url) ? `<section class="content-block block-link-button reveal"><a class="project-pill" href="${safeURL(b.url)}" target="_blank" rel="noopener" aria-label="${esc(b.ariaLabel || (b.label + ' (opens in a new tab)'))}">${esc(b.label)} <span aria-hidden="true">↗</span></a></section>` : '',
     video: b => videoBlock(b, false),
     'device-video': b => videoBlock(b, true),
     intro: (b, p, name) => {
