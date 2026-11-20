@@ -194,3 +194,6 @@ a.block-chip:hover{border-color:var(--project-accent);color:var(--project-accent
 /* Keep the title-to-context gap consistent on pages without a full-screen opening. */
 .block-page:not(:has(.project-opening)) .block-intro{margin-bottom:clamp(2rem,6vh,4.5rem)}
 .block-page:not(:has(.project-opening)) .vertical-hero{margin-bottom:0}
+
+/* Balance the first screen from the top; compact padding only when Context needs room. */
+.block-page .project-opening{min-height:calc(100svh - var(--header-height,70px));height:auto;justify-content:flex-start;padding-top:var(--opening-top,clamp(3rem,12vh,9rem));gap:clamp(4rem,16vh,11rem)}
