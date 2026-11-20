@@ -222,3 +222,6 @@ a.block-chip:hover{border-color:var(--project-accent);color:var(--project-accent
 .block-page:has(.block-link-button) .vertical-end{margin-top:clamp(2rem,6vh,4rem)}
 @media(max-width:700px){.block-link-button{grid-template-columns:1fr}.block-link-button .project-pill{grid-column:1}}
 @media(prefers-reduced-motion:reduce){.project-pill span{transition:none}.project-pill:hover span,.project-pill:focus-visible span{transform:none}}
+
+/* Concorde Result and its website action share a compact gap. */
+.block-page[aria-label="Concorde case study"] .post-opening>.block-row:has(+ .block-link-button){margin-bottom:clamp(1.5rem,3.5vh,2.5rem)}
