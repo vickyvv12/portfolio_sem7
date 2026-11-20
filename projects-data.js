@@ -209,11 +209,7 @@ window.PORTFOLIO_PROJECTS = [
         "type": "video",
         "src": null,
         "poster": "/images/bloom/video-placeholder.svg",
-        "alt": "Concorde website recording",
-        "link": {
-          "text": "Visit the website",
-          "href": null
-        }
+        "alt": "Concorde website recording"
       },
       {
         "type": "highlight",
@@ -309,6 +305,12 @@ window.PORTFOLIO_PROJECTS = [
         "paragraphs": [
           "The site is live and has been tested with cabin crew, the audience it was designed for."
         ]
+      },
+      {
+        "type": "link-button",
+        "label": "Visit the website",
+        "url": "https://concordewebsite.vercel.app",
+        "ariaLabel": "Visit the Concorde website (opens in a new tab)"
       }
     ]
   },
