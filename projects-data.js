@@ -124,7 +124,7 @@ window.PORTFOLIO_PROJECTS = [
       {
         "type": "video",
         "src": "/images/bloom/concept.mp4",
-        "poster": "/images/bloom/video-placeholder.svg",
+        "poster": "/images/bloom/concept-poster.webp",
         "alt": "Bloom concept video",
         "caption": "Concept video: how Bloom could look at full scale."
       },
