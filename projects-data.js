@@ -106,7 +106,7 @@ window.PORTFOLIO_PROJECTS = [
     "category": "design",
     "tag": "Research & interaction design",
     "art": "garden",
-    "accent": "#486543",
+    "accent": "#814057",
     "id": "feedback-garden",
     "blocks": [
       {
