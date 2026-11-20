@@ -125,7 +125,7 @@ a.block-chip:hover{border-color:var(--project-accent);color:var(--project-accent
  .block-numbers>.block-label,.block-compare>.block-label{margin:0}
 }
 /* A single-screen opening; later sections keep the same block vocabulary. */
-.project-opening{height:calc(100svh - var(--header-height,70px));display:flex;flex-direction:column;justify-content:space-between;gap:24px;padding-top:clamp(20px,4svh,48px);padding-bottom:clamp(24px,4svh,42px)}
+.project-opening{min-height:100svh;height:auto;display:flex;flex-direction:column;justify-content:flex-start;gap:clamp(2rem,6vh,4.5rem);padding-top:clamp(20px,4svh,48px);padding-bottom:clamp(24px,4svh,42px)}
 .project-opening>.content-block{margin:0;flex-shrink:0}
 .block-page .project-opening .vertical-hero{margin:0}
 .post-opening{--block-space:16vh;display:flow-root;padding-top:16vh}
@@ -138,12 +138,12 @@ a.block-chip:hover{border-color:var(--project-accent);color:var(--project-accent
 .block-numbers .numbers-grid{grid-column:2}
 .block-page:has(.project-opening) .vertical-end{margin-top:16vh}
 @media(max-width:700px){
- .project-opening{padding-top:24px;padding-bottom:24px;gap:20px}
+ .project-opening{padding-top:24px;padding-bottom:24px;gap:clamp(2rem,6vh,4.5rem)}
  .project-opening .block-copy{font-size:1.1rem}
  .block-numbers .numbers-grid{grid-column:1}
 }
 @media(max-width:700px) and (max-height:650px){
- .project-opening{padding-top:16px;padding-bottom:16px;gap:14px}
+ .project-opening{padding-top:16px;padding-bottom:16px;gap:clamp(2rem,6vh,4.5rem)}
  .project-opening .block-copy{font-size:1rem}
  .block-page .project-opening .vertical-hero h1{font-size:clamp(2rem,8vw,3rem)}
 }
@@ -166,9 +166,11 @@ a.block-chip:hover{border-color:var(--project-accent);color:var(--project-accent
 .strip-track .is-compact img{width:100%;height:auto;max-width:100%}
 
 /* Compact videos share the same text-column alignment as project rows. */
-:root{--accent-green:#486543}
-.vertical-project .vertical-tag,.vertical-project .vertical-next,.vertical-project .vertical-next:hover,.vertical-project .vertical-next:focus-visible{color:var(--accent-green)}
-.vertical-project .vertical-next:focus-visible{outline-color:var(--accent-green)}
+:root{--text:#3a1530;--text-soft:color-mix(in srgb,var(--text) 65%,transparent)}
+.vertical-project{color:var(--text)}
+.vertical-project .vertical-tag,.vertical-project .vertical-next>span,.vertical-project .vertical-next small{color:var(--text-soft)}
+.vertical-project .vertical-next,.vertical-project .vertical-next strong,.vertical-project .vertical-next strong span,.vertical-project .vertical-next:hover,.vertical-project .vertical-next:focus-visible{color:var(--text)}
+.vertical-project .vertical-next:focus-visible{outline-color:var(--text)}
 .vertical-next:hover strong,.vertical-next:focus-visible strong{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:.15em}
 .block-video{margin-inline:0;display:grid;grid-template-columns:minmax(180px,1fr) 2fr;gap:0}
 .block-video>div,.block-video>figcaption{grid-column:2}
@@ -188,3 +190,7 @@ a.block-chip:hover{border-color:var(--project-accent);color:var(--project-accent
  .tablet-frame{padding:8px;border-radius:18px}
  .tablet-frame video{border-radius:10px}
 }
+
+/* Keep the title-to-context gap consistent on pages without a full-screen opening. */
+.block-page:not(:has(.project-opening)) .block-intro{margin-bottom:clamp(2rem,6vh,4.5rem)}
+.block-page:not(:has(.project-opening)) .vertical-hero{margin-bottom:0}
