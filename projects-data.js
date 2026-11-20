@@ -196,67 +196,119 @@ window.PORTFOLIO_PROJECTS = [
       {
         "type": "intro",
         "title": "Concorde",
-        "tag": "Interactive storytelling",
-        "text": "A journey from boarding in London to landing in New York.",
-        "facts": {
-          "role": "Duo project · Research & front-end contribution",
-          "timeframe": "Semester 7 · 2026",
-          "tools": [
-            "Audience research",
-            "Personas",
-            "Storytelling",
-            "Front-end development"
-          ],
-          "client": "Academic project"
-        }
+        "tag": "Interactive storytelling"
       },
       {
         "type": "row",
         "label": "Context",
         "paragraphs": [
-          "Create an interactive tribute that introduces an iconic design through an engaging visual story.",
-          "A journey from boarding in London to landing in New York."
+          "Concorde: A Transatlantic Journey is a tribute to a design, the aircraft that crossed the Atlantic at twice the speed of sound. It is a virtual Concorde flight from London to New York, told as a scroll-driven website. Each stage of the flight teaches one design decision of the aircraft."
+        ]
+      },
+      {
+        "type": "video",
+        "src": null,
+        "poster": "/images/bloom/video-placeholder.svg",
+        "alt": "Concorde website recording",
+        "link": {
+          "text": "Visit the website",
+          "href": null
+        }
+      },
+      {
+        "type": "highlight",
+        "label": "Process",
+        "text": "Instead of reading about Concorde, how can you understand why it looks the way it does by flying it?",
+        "paragraphs": [
+          "I started with research on the aircraft and sketched the whole flight by hand, from boarding to landing. I then interviewed cabin crew to find out whether they were the right audience."
+        ],
+        "chips": [
+          "Research Notes",
+          "Target Audience V2",
+          "Interviews Analysis",
+          "Proof of Concept"
+        ]
+      },
+      {
+        "type": "media-strip",
+        "items": [
+          {
+            "type": "image",
+            "src": "/images/concorde/sketch-1a.jpg",
+            "caption": "First sketch: the flight scene by scene",
+            "alt": "First sketch: the flight scene by scene",
+            "placeholder": true
+          },
+          {
+            "type": "image",
+            "src": "/images/concorde/sketch-1b.jpg",
+            "caption": "First sketch: the flight scene by scene",
+            "alt": "First sketch: the flight scene by scene",
+            "placeholder": true
+          },
+          {
+            "type": "image",
+            "src": "/images/concorde/sketch-2a.jpg",
+            "caption": "Second sketch, with more detail",
+            "alt": "Second sketch, with more detail",
+            "placeholder": true
+          },
+          {
+            "type": "image",
+            "src": "/images/concorde/sketch-2b.jpg",
+            "caption": "Second sketch, with more detail",
+            "alt": "Second sketch, with more detail",
+            "placeholder": true
+          }
+        ]
+      },
+      {
+        "type": "highlight",
+        "label": "Insight",
+        "text": "Cabin crew knew Concorde was fast, but not why it looks the way it does, and they wanted to be guided through it.",
+        "paragraphs": [
+          "Their interest was in the history and the passenger experience and most preferred a guided journey over free exploration. So the site follows one flight in order and each stage shows a design decision: the small windows at 60,000 ft, the nose that drops 5° for take-off and 12.5° for landing and the heat at Mach 2."
         ]
       },
       {
         "type": "row",
-        "label": "Concept",
+        "label": "Design & testing",
         "paragraphs": [
-          "Introduce the central idea and the audience it was intended for.",
-          "Explain how the concept connects the project brief to the experience visitors would have."
-        ],
-        "draft": true,
-        "leadBold": null
+          "Early feedback on the concept suggested a personalised ticket and the sound of the plane and both made it into the site. The visitor types their name at check-in on a boarding pass and the flight certificate at the end that carries that name. Over three iterations the site moved from Figma frames to code, with a 3D model and real photographs of Concorde and it was tested with cabin crew."
+        ]
       },
       {
-        "type": "row",
-        "label": "Design",
-        "paragraphs": [
-          "Explain one important design decision and the need it addresses.",
-          "Add sketches, wireframes or a prototype image to show how the idea developed."
-        ],
-        "draft": true,
-        "leadBold": null
-      },
-      {
-        "type": "row",
-        "label": "Build",
-        "paragraphs": [
-          "Describe the main implementation choices and your individual contribution.",
-          "Add an example of an interaction, technical challenge or improvement made during development."
-        ],
-        "draft": true,
-        "leadBold": null
+        "type": "media-strip",
+        "items": [
+          {
+            "type": "image",
+            "src": null,
+            "caption": "The certificate",
+            "alt": "The certificate",
+            "placeholder": true
+          },
+          {
+            "type": "image",
+            "src": null,
+            "caption": "The boarding pass",
+            "alt": "The boarding pass",
+            "placeholder": true
+          },
+          {
+            "type": "image",
+            "src": null,
+            "caption": "The cabin tour",
+            "alt": "The cabin tour",
+            "placeholder": true
+          }
+        ]
       },
       {
         "type": "row",
         "label": "Result",
         "paragraphs": [
-          "Summarise the final deliverable and what was demonstrated or validated.",
-          "Close with one lesson and a practical next step. Replace this draft with the final project reflection."
-        ],
-        "draft": true,
-        "leadBold": null
+          "The site is live and has been tested with cabin crew, the audience it was designed for."
+        ]
       }
     ]
   },

@@ -204,3 +204,10 @@ a.block-chip:hover{border-color:var(--project-accent);color:var(--project-accent
 .post-opening .block-row+.block-video,.post-opening .block-row+.block-strip{margin-top:0;padding-top:0;min-height:0}
 .block-page .project-opening:has(>.block-video){min-height:0;padding-bottom:0}
 .block-page .project-opening>.block-video{margin-top:calc(var(--media-gap) - clamp(4rem,16vh,11rem));margin-bottom:0;padding-top:0;min-height:0}
+
+.video-action{grid-column:2;margin-top:16px}
+.video-action a,.video-action button{display:inline-block;padding:12px 20px;border:1px solid currentColor;background:transparent;color:var(--text);font:inherit}
+.video-action button:disabled{cursor:default;opacity:.65}
+@media(max-width:700px){.video-action{grid-column:1}}
+
+.wide-video-frame .video-placeholder{width:100%;aspect-ratio:16/9;background:#eee7e6}

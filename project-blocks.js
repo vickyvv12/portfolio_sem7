@@ -18,7 +18,7 @@ window.PortfolioBlocks = (() => {
     return `<div class="block-media-surface${item.compact ? ' is-compact' : ''}"><img src="${src}" alt="${esc(item.alt || 'Project image')}" loading="lazy" decoding="async" draggable="false">${note}</div>`;
   }
   const caption = text => text ? `<figcaption>${esc(text)}</figcaption>` : '';
-  const videoBlock = (b, device) => `<figure class="content-block block-video ${device ? 'block-device-video' : 'block-wide-video'} reveal"><div class="${device ? 'tablet-frame' : 'wide-video-frame'}"><video ${device ? 'data-visibility-play' : 'controls'} muted loop playsinline preload="none" aria-label="${esc(b.alt)}" poster="${safeURL(b.poster)}"><source src="${safeURL(b.src)}" type="video/mp4"></video></div>${caption(b.caption)}</figure>`;
+  const videoBlock = (b, device) => `<figure class="content-block block-video ${device ? 'block-device-video' : 'block-wide-video'} reveal"><div class="${device ? 'tablet-frame' : 'wide-video-frame'}">${safeURL(b.src) ? `<video ${device ? 'data-visibility-play' : 'controls'} muted loop playsinline preload="none" aria-label="${esc(b.alt)}" poster="${safeURL(b.poster)}"><source src="${safeURL(b.src)}" type="video/mp4"></video>` : `<div class="video-placeholder" role="img" aria-label="${esc(b.alt)}"></div>`}</div>${caption(b.caption)}${b.link ? `<div class="video-action">${safeURL(b.link.href) ? `<a href="${safeURL(b.link.href)}" target="_blank" rel="noopener noreferrer">${esc(b.link.text)}</a>` : `<button type="button" disabled>${esc(b.link.text)}</button>`}</div>` : ''}</figure>`;
   const renderers = {
     video: b => videoBlock(b, false),
     'device-video': b => videoBlock(b, true),
