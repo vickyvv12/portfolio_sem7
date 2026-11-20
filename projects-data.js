@@ -133,7 +133,7 @@ window.PORTFOLIO_PROJECTS = [
         "label": "Process",
         "text": "How can an interactive installation make museum visitors provide quick and meaningful feedback while remaining part of the museum experience?",
         "paragraphs": [
-          "I followed the Double Diamond. I explored different contexts, from trains to museums and surveyed people before designing anything."
+          "I followed the Double Diamond. I explored the same idea with flowers and with light, then combined their strengths in the final design."
         ]
       },
       {
@@ -141,24 +141,21 @@ window.PORTFOLIO_PROJECTS = [
         "items": [
           {
             "type": "image",
-            "src": "/images/bloom/process-1.png",
-            "alt": "Early version: feedback at every artwork",
-            "caption": "Early version: feedback at every artwork",
-            "placeholder": true
+            "src": "/images/bloom/first-prototype.png",
+            "caption": "First prototype: scan a QR code at an artwork",
+            "alt": "Bloom app screens, first prototype with flowers on a dark green background"
           },
           {
             "type": "image",
-            "src": "/images/bloom/process-2.png",
-            "alt": "Revised version: one reflection at the end of the visit",
-            "caption": "Revised version: one reflection at the end of the visit",
-            "placeholder": true
+            "src": "/images/bloom/light-version.png",
+            "caption": "Same idea, with light instead of flowers",
+            "alt": "Bloom app screens, version with glowing light shapes instead of flowers"
           },
           {
             "type": "image",
-            "src": "/images/bloom/process-3.png",
-            "alt": "The garden view",
-            "caption": "The garden view",
-            "placeholder": true
+            "src": "/images/bloom/final-design.png",
+            "caption": "Final design: the flower and the garden",
+            "alt": "Bloom app screens, final design with glowing flowers and a collective garden"
           }
         ]
       },
@@ -174,14 +171,16 @@ window.PORTFOLIO_PROJECTS = [
         "type": "row",
         "label": "Design & testing",
         "paragraphs": [
-          "Testers asked for a QR code alongside the screen and for flowers that are easier to tell apart. Feedback from peers and teachers led to the biggest change. Bloom now asks once, at the end of the visit, because asking at every artwork would repeat the interruption we wanted to remove."
+          "The first prototype worked through a QR code: scan one next to an exhibition, answer on your phone and watch a flower join the garden. Testing showed that visitors liked having both a QR code and a screen. So I added a screen at the end of the exhibition where visitors can answer without a phone, with the QR code as an alternative.",
+          "Feedback from peers and teachers led to a second change. Bloom now asks once, at the end of the visit, because asking at every artwork would repeat the interruption we wanted to remove."
         ]
       },
       {
         "type": "device-video",
         "src": "/images/bloom/tablet.mp4",
-        "poster": "/images/bloom/video-placeholder.svg",
-        "alt": "Bloom tablet prototype in use"
+        "poster": "/images/bloom/tablet-poster.webp",
+        "alt": "Bloom tablet prototype in use",
+        "caption": "The screen version for the end of the exhibition"
       }
     ],
     "openingScreen": true
