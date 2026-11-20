@@ -456,7 +456,7 @@ function renderHome(){
  projects.forEach((p,i)=>{
   if(i===5){
    const divider=document.createElement('div');divider.className='project-divider';
-   divider.innerHTML='<span>[Cyber security]</span>';target.append(divider);
+   divider.innerHTML='<span>Cyber security</span>';target.append(divider);
   }
   const row=document.createElement('div');row.className='project';row.dataset.category=p.category;
   row.innerHTML=`<a class="project-link" href="${projectUrl(p)}"><span class="num">[${String(i+1).padStart(2,'0')}]</span><span class="title" style="view-transition-name:project-${slug(p)}">${p.title}</span><span class="tag">[${p.tag}]</span></a><div class="preview">${graphic(p.art)}</div>`;
