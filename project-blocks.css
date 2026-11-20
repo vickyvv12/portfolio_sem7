@@ -211,3 +211,14 @@ a.block-chip:hover{border-color:var(--project-accent);color:var(--project-accent
 @media(max-width:700px){.video-action{grid-column:1}}
 
 .wide-video-frame .video-placeholder{width:100%;aspect-ratio:16/9;background:#eee7e6}
+
+/* Reusable project call to action, aligned to the reading column. */
+.block-link-button{display:grid;grid-template-columns:minmax(180px,1fr) 2fr}
+.block-link-button .project-pill{grid-column:2;justify-self:start;display:inline-flex;align-items:center;gap:.5em;font-family:inherit;font-size:1.1rem;font-weight:500;line-height:1.4;padding:.9rem 1.8rem;border-radius:999px;border:1.5px solid var(--text);background:transparent;color:var(--text);transition:background-color .25s ease,color .25s ease}
+.project-pill span{display:inline-block;transition:transform .25s ease}
+.block-link-button .project-pill:hover,.block-link-button .project-pill:focus-visible{background:var(--text);color:var(--bg,#fff3f0)}
+.block-link-button .project-pill:focus-visible{outline:2px solid var(--text);outline-offset:3px}
+.project-pill:hover span,.project-pill:focus-visible span{transform:translate(3px,-3px)}
+.block-page:has(.block-link-button) .vertical-end{margin-top:clamp(2rem,6vh,4rem)}
+@media(max-width:700px){.block-link-button{grid-template-columns:1fr}.block-link-button .project-pill{grid-column:1}}
+@media(prefers-reduced-motion:reduce){.project-pill span{transition:none}.project-pill:hover span,.project-pill:focus-visible span{transform:none}}
