@@ -207,8 +207,9 @@ window.PORTFOLIO_PROJECTS = [
       },
       {
         "type": "video",
-        "src": null,
-        "poster": "/images/bloom/video-placeholder.svg",
+        "src": "/images/concorde/concorde-site.mp4",
+        "poster": "/images/concorde/concorde-poster.jpg",
+        "playWhenVisible": true,
         "alt": "Concorde website recording"
       },
       {
@@ -271,24 +272,21 @@ window.PORTFOLIO_PROJECTS = [
         "items": [
           {
             "type": "image",
-            "src": null,
-            "caption": "The certificate",
-            "alt": "The certificate",
-            "placeholder": true
+            "src": "/images/concorde/boarding-pass.png",
+            "caption": "Check-in: the visitor types their name on a boarding pass",
+            "alt": "London to New York Concorde boarding pass with a passenger name field and a seat map."
           },
           {
             "type": "image",
-            "src": null,
-            "caption": "The boarding pass",
-            "alt": "The boarding pass",
-            "placeholder": true
+            "src": "/images/concorde/cabin-tour.png",
+            "caption": "Cabin tour: drag to look around the inside of G-BOAA",
+            "alt": "View down the aisle of Concorde G-BOAA, with passenger seats on either side and interactive tour hotspots."
           },
           {
             "type": "image",
-            "src": null,
-            "caption": "The cabin tour",
-            "alt": "The cabin tour",
-            "placeholder": true
+            "src": "/images/concorde/certificate.png",
+            "caption": "The flight certificate has the name from check-in",
+            "alt": "Concorde supersonic flight certificate showing the passenger name in script above the flight details and a gold Mach 2 seal."
           }
         ]
       },
