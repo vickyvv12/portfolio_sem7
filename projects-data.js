@@ -4,14 +4,13 @@ Media: {type: 'image'|'video', src, alt, caption, poster?}; use placeholder:true
 Optional PDF links: chips.items[].href / documents.items[].href. Null keeps an honest unlinked placeholder.
 Spotlight: {type:'spotlight', label, device:'phone'|'laptop', media, title, paragraphs:[]}.
 Quote: {type:'quote', label, text, attribution}. All prose is plain text.
-Add a project object with id, title, tag, category, art, accent and blocks; navigation is automatic. */
+Add a project object with id, title, tag, category, art and blocks; navigation is automatic. */
 window.PORTFOLIO_PROJECTS = [
   {
     "title": "Starter Template Library",
     "category": "design",
     "tag": "Internship · Cape",
     "art": "cape",
-    "accent": "#814057",
     "id": "starter-template-library",
     "blocks": [
       {
@@ -106,7 +105,6 @@ window.PORTFOLIO_PROJECTS = [
     "category": "design",
     "tag": "Research & interaction design",
     "art": "garden",
-    "accent": "#814057",
     "id": "feedback-garden",
     "blocks": [
       {
@@ -190,7 +188,6 @@ window.PORTFOLIO_PROJECTS = [
     "category": "design",
     "tag": "Interactive storytelling",
     "art": "plane",
-    "accent": "#39657b",
     "id": "concorde",
     "blocks": [
       {
@@ -310,7 +307,6 @@ window.PORTFOLIO_PROJECTS = [
     "category": "design",
     "tag": "UX/UI · Partout / CBR",
     "art": "road",
-    "accent": "#8d4c42",
     "id": "companion-on-the-road",
     "blocks": [
       {
@@ -395,7 +391,6 @@ window.PORTFOLIO_PROJECTS = [
     "category": "design",
     "tag": "Web design & development",
     "art": "speakers",
-    "accent": "#205d70",
     "id": "lighttown-speakers",
     "blocks": [
       {
@@ -470,7 +465,6 @@ window.PORTFOLIO_PROJECTS = [
     "category": "security",
     "tag": "Data space security assessment",
     "art": "network",
-    "accent": "#4c5e86",
     "id": "citizencity",
     "blocks": [
       {
@@ -545,7 +539,6 @@ window.PORTFOLIO_PROJECTS = [
     "category": "security",
     "tag": "Network & web attack detection",
     "art": "network",
-    "accent": "#586393",
     "id": "security-monitoring",
     "blocks": [
       {
@@ -620,7 +613,6 @@ window.PORTFOLIO_PROJECTS = [
     "category": "security",
     "tag": "Smart home & IoT investigations",
     "art": "terminal",
-    "accent": "#716044",
     "id": "digital-forensics",
     "blocks": [
       {

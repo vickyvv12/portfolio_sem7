@@ -15,8 +15,8 @@
 .block-highlight .block-label{margin-bottom:18px}
 .block-highlight p,.block-quote blockquote p{font:400 clamp(1.6rem,2.5vw,2rem)/1.35 Arial,Helvetica,sans-serif;max-width:46ch;margin:0;text-wrap:pretty;letter-spacing:-.02em}
 .block-chip-list{display:flex;flex-wrap:wrap;align-items:flex-start;gap:9px}
-.block-chip{display:inline-flex;align-items:center;gap:9px;font-size:14px;line-height:1.5;border:1px solid #c6a6b2;border-radius:99px;padding:9px 15px;color:#3e1830;background:#f8e9ed}
-a.block-chip:hover{border-color:var(--project-accent);color:var(--project-accent)}
+.block-chip{display:inline-flex;align-items:center;gap:9px;font-size:14px;line-height:1.5;border:1px solid var(--text);border-radius:99px;padding:9px 15px;color:var(--text);background:#f8e9ed}
+a.block-chip:is(:hover,:focus-visible){color:var(--blush)}
 .doc-icon{display:inline-block;width:14px;height:17px;flex-shrink:0;vertical-align:middle}
 .block-media-surface{position:relative;background:#efdee4;overflow:hidden}
 .block-media-surface img,.block-media-surface video{display:block;width:100%;height:auto}
@@ -31,10 +31,11 @@ a.block-chip:hover{border-color:var(--project-accent);color:var(--project-accent
 .strip-track .block-media-surface{height:clamp(240px,50vh,600px);width:max-content;max-width:90vw}
 .strip-track img,.strip-track video{width:auto;height:100%;max-width:90vw;object-fit:contain}
 .strip-footer{display:flex;align-items:center;gap:22px;margin-top:16px}
-.strip-progress{height:2px;background:#dbc3cc;flex:1;overflow:hidden}
-.strip-progress span{display:block;width:100%;height:100%;transform-origin:left;background:var(--project-accent);transform:scaleX(0);transition:transform .1s linear}
+.strip-progress{height:2px;background:color-mix(in srgb,var(--text) 25%,transparent);flex:1;overflow:hidden}
+.strip-progress span{display:block;width:100%;height:100%;transform-origin:left;background:var(--text);transform:scaleX(0);transition:transform .1s linear}
 .strip-arrows{display:flex;gap:10px}
-.strip-arrows button{width:44px;height:44px;border:1px solid #c6a6b2;border-radius:50%;background:none;color:var(--project-accent);font-size:23px}
+.strip-arrows button{width:44px;height:44px;border:1px solid color-mix(in srgb,var(--text) 40%,transparent);border-radius:50%;background:none;color:var(--text);font-size:23px}
+.strip-arrows button:not(:disabled):is(:hover,:focus-visible){color:var(--blush)}
 .strip-arrows button:disabled{opacity:.3;cursor:default}
 .compare-copy{margin-bottom:28px}
 .compare-grid{display:grid;grid-template-columns:repeat(var(--compare-count,3),minmax(0,1fr));gap:22px}
@@ -61,7 +62,7 @@ a.block-chip:hover{border-color:var(--project-accent);color:var(--project-accent
 .block-documents a>span:first-child,.document-placeholder>span{display:flex;align-items:center;gap:10px}
 .document-placeholder small{font-size:12px;color:#694858;white-space:nowrap}
 .block-documents li p{font-size:14px;line-height:1.6;margin-bottom:0}
-.block-page a:focus-visible,.block-page button:focus-visible,.strip-viewport:focus-visible{outline:2px solid #57172f;outline-offset:5px}
+.block-page a:focus-visible,.block-page button:focus-visible,.strip-viewport:focus-visible{outline:2px solid var(--text);outline-offset:5px}
 .block-page .vertical-end{margin-top:8vh}
 @media(min-width:701px) and (max-width:1100px){body.project-view main{padding-right:40px}}
 @media(max-width:700px){
