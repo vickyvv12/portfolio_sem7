@@ -255,6 +255,12 @@ window.PORTFOLIO_PROJECTS = [
             "src": "/images/concorde/wireframe-07.png",
             "caption": "Wireframe, frame 7: breaking the sound barrier",
             "alt": "Low-fidelity wireframe showing Mach speeds from 0.8 to 2.0 above a route view"
+          },
+          {
+            "type": "image",
+            "src": "/images/concorde/wireframe-16.png",
+            "caption": "Wireframe, frame 16: the journey ends with a boarding pass",
+            "alt": "Low-fidelity wireframe of the final screen with a boarding pass showing London to New York and buttons to download the pass or restart the journey"
           }
         ]
       },
