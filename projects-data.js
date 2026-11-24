@@ -240,21 +240,21 @@ window.PORTFOLIO_PROJECTS = [
         "items": [
           {
             "type": "image",
-            "src": "/images/concorde/sketch-1a.jpg",
-            "caption": "First sketch: the flight scene by scene",
-            "alt": "First hand-drawn Concorde journey sketch showing the landing page, aircraft exploration and cabin."
+            "src": "/images/concorde/wireframe-01.png",
+            "caption": "Wireframe, frame 1: the boarding pass opening",
+            "alt": "Low-fidelity wireframe of the opening screen with a boarding pass from London to New York and a field for the passenger's name"
           },
           {
             "type": "image",
-            "src": "/images/concorde/sketch-2a.jpg",
-            "caption": "Second sketch, with more detail",
-            "alt": "Detailed Concorde sketch, first page: boarding pass, aircraft, seating, cockpit and take-off."
+            "src": "/images/concorde/wireframe-05.png",
+            "caption": "Wireframe, frame 5: take-off, driven by a thrust slider",
+            "alt": "Low-fidelity wireframe of the take-off screen with a runway view and a thrust slider"
           },
           {
             "type": "image",
-            "src": "/images/concorde/sketch-2b.jpg",
-            "caption": "Second sketch, with more detail",
-            "alt": "Detailed Concorde sketch, second page: climb, supersonic flight, cabin exploration and altitude."
+            "src": "/images/concorde/wireframe-07.png",
+            "caption": "Wireframe, frame 7: breaking the sound barrier",
+            "alt": "Low-fidelity wireframe showing Mach speeds from 0.8 to 2.0 above a route view"
           }
         ]
       },
