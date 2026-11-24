@@ -344,10 +344,18 @@ window.PORTFOLIO_PROJECTS = [
           "Desk research, interviews with a driving instructor and young drivers and a survey came first. I defined the problem with point-of-view and how-might-we questions. Five concepts came out of the brainstorm, including video tutorials, an app and social media campaigns. I continued with the app, built a prototype and tested it with users."
         ],
         "chips": [
-          "Project Plan",
-          "Research",
-          "Interviews analysis",
-          "Survey analysis",
+          {
+            "text": "Research",
+            "href": "./documents/companion/research.pdf"
+          },
+          {
+            "text": "Interviews analysis",
+            "href": "./documents/companion/interviews-analysis.pdf"
+          },
+          {
+            "text": "Survey analysis",
+            "href": "./documents/companion/survey-analysis.pdf"
+          },
           "User testing"
         ]
       },
@@ -408,6 +416,12 @@ window.PORTFOLIO_PROJECTS = [
         "label": "Result",
         "paragraphs": [
           "Road Ready is a clickable prototype, not a built app: it is English only and has a limited set of exercises. The client received a presentation and an advice report with the next steps for building it."
+        ],
+        "links": [
+          {
+            "text": "Advice Report",
+            "href": "./documents/companion/advice-report.pdf"
+          }
         ]
       }
     ]
