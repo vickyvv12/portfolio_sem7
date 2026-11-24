@@ -356,7 +356,10 @@ window.PORTFOLIO_PROJECTS = [
             "text": "Survey analysis",
             "href": "./documents/companion/survey-analysis.pdf"
           },
-          "User testing"
+          {
+            "text": "Advice Report",
+            "href": "./documents/companion/advice-report.pdf"
+          }
         ]
       },
       {
@@ -410,19 +413,6 @@ window.PORTFOLIO_PROJECTS = [
           "alt": "Recording of the Road Ready mobile app prototype",
           "caption": "The high-fidelity prototype in Figma"
         }
-      },
-      {
-        "type": "row",
-        "label": "Result",
-        "paragraphs": [
-          "Road Ready is a clickable prototype, not a built app: it is English only and has a limited set of exercises. The client received a presentation and an advice report with the next steps for building it."
-        ],
-        "links": [
-          {
-            "text": "Advice Report",
-            "href": "./documents/companion/advice-report.pdf"
-          }
-        ]
       }
     ]
   },
