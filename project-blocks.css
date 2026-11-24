@@ -61,10 +61,11 @@
   --font-highlight: "Instrument Serif", var(--font-sans);
   --highlight-size: clamp(2rem, 3.4vw, 3.2rem);
   --highlight-line-height: 1.15;
-  --body-size: clamp(1.05rem, 1.3vw, 1.3rem);
-  --body-line-height: 1.6;
-  --body-measure: 62ch;
-  --label-size: 0.85rem;
+  --body-size: clamp(1.2rem, 1.5vw, 1.5rem);
+  --body-line-height: 1.55;
+  --body-measure: 64ch;
+  --label-size: 0.95rem;
+  --chip-size: 1rem;
   --label-tracking: 0.04em;
 }
 
@@ -114,7 +115,7 @@
 .block-highlight .block-label{margin-bottom:18px}
 .block-quote blockquote p{font:400 clamp(1.6rem,2.5vw,2rem)/1.35 Arial,Helvetica,sans-serif;max-width:46ch;margin:0;text-wrap:pretty;letter-spacing:-.02em}
 .block-chip-list{display:flex;flex-wrap:wrap;align-items:flex-start;gap:9px}
-.block-chip{display:inline-flex;align-items:center;gap:9px;font-size:14px;line-height:1.5;border:1px solid var(--text);border-radius:99px;padding:9px 15px;color:var(--text);background:#f8e9ed}
+.block-chip{display:inline-flex;align-items:center;gap:9px;font-size:var(--chip-size);line-height:1.5;border:1px solid var(--text);border-radius:99px;padding:9px 15px;color:var(--text);background:#f8e9ed}
 a.block-chip:is(:hover,:focus-visible){color:var(--blush)}
 .doc-icon{display:inline-block;width:14px;height:17px;flex-shrink:0;vertical-align:middle}
 .block-media-surface{position:relative;background:#efdee4;overflow:hidden}
