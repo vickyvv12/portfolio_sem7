@@ -392,22 +392,16 @@ window.PORTFOLIO_PROJECTS = [
         "type": "row",
         "label": "Design & testing",
         "paragraphs": [
-          "I explored the idea as a website, in a wireframe and a prototype version and as a mobile app, including a green design that I later dropped. The final design is a high-fidelity Figma prototype you can click through, with exercises, video tutorials, relaxation tips, favourites and a community chat."
-        ]
-      },
-      {
-        "type": "video",
-        "src": "./images/companion/prototype.mp4",
-        "poster": "./images/companion/prototype-poster.jpg",
-        "playWhenVisible": true,
-        "alt": "Recording of the Road Ready mobile app prototype",
-        "caption": "The high-fidelity prototype in Figma"
-      },
-      {
-        "type": "row",
-        "paragraphs": [
+          "I explored the idea as a website, in a wireframe and a prototype version and as a mobile app, including a green design that I later dropped. The final design is a high-fidelity Figma prototype you can click through, with exercises, video tutorials, relaxation tips, favourites and a community chat.",
           "Most users liked the colours and found the navigation straightforward and some felt calmer after following a relaxation tip. They also found the filter hard to use, the forum posts too text-heavy and the colours a lot. I made the appropriate adjustments based on this."
-        ]
+        ],
+        "videoAfterFirstParagraph": {
+          "src": "./images/companion/prototype.mp4",
+          "poster": "./images/companion/prototype-poster.jpg",
+          "playWhenVisible": true,
+          "alt": "Recording of the Road Ready mobile app prototype",
+          "caption": "The high-fidelity prototype in Figma"
+        }
       },
       {
         "type": "row",
