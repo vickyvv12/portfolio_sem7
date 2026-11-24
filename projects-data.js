@@ -217,13 +217,22 @@ window.PORTFOLIO_PROJECTS = [
           "I started with research on the aircraft and sketched the whole flight by hand, from boarding to landing. I then interviewed cabin crew to find out whether they were the right audience."
         ],
         "chips": [
-          "Research Notes",
-          "Target Audience V2",
+          {
+            "text": "Research Notes",
+            "href": "./documents/concorde/research-notes.pdf"
+          },
+          {
+            "text": "Target Audience V2",
+            "href": "./documents/concorde/target-audience-v2.pdf"
+          },
           {
             "text": "Interviews Analysis",
             "href": "/documents/concorde/interviews-analysis.pdf"
           },
-          "Proof of Concept"
+          {
+            "text": "Proof of Concept",
+            "href": "./documents/concorde/proof-of-concept.pdf"
+          }
         ]
       },
       {
