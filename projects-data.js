@@ -320,84 +320,59 @@ window.PORTFOLIO_PROJECTS = [
   {
     "title": "Companion on the Road",
     "category": "design",
-    "tag": "UX/UI · Partout / CBR",
+    "tag": "UX design · Client project",
     "art": "road",
     "id": "companion-on-the-road",
     "blocks": [
       {
         "type": "intro",
         "title": "Companion on the Road",
-        "tag": "UX/UI · Partout / CBR",
-        "text": "Helping young drivers prepare with more confidence.",
-        "facts": {
-          "role": "Independently completed client assignment",
-          "timeframe": "Semester 3 · 2024",
-          "tools": [
-            "Double Diamond",
-            "Interviews & surveys",
-            "Figma",
-            "Usability testing"
-          ],
-          "client": "Academic project"
-        }
+        "tag": "UX design · Client project"
       },
       {
         "type": "row",
         "label": "Context",
         "paragraphs": [
-          "Partout’s brief asked for a digital proof of concept to support 16–19-year-olds preparing for their driving exam.",
-          "Helping young drivers prepare with more confidence."
+          "CBR, the Dutch driving exam organisation, wants to be seen as a companion on the road rather than someone out to fail you. Working with the agency Partout, I designed Road Ready, a mobile app concept that helps drivers aged 16 to 19 prepare for their exam and stay calm."
+        ]
+      },
+      {
+        "type": "highlight",
+        "label": "Process",
+        "text": "How can CBR guide teens through getting their licence, so more of them pass the first time?",
+        "paragraphs": [
+          "Desk research, interviews with a driving instructor and young drivers and a survey came first. I defined the problem with point-of-view and how-might-we questions. Five concepts came out of the brainstorm, including video tutorials, an app and social media campaigns. I continued with the app, built a prototype and tested it with users."
+        ],
+        "chips": [
+          "Project Plan",
+          "Research",
+          "Interviews analysis",
+          "Survey analysis",
+          "User testing"
+        ]
+      },
+      {
+        "type": "highlight",
+        "label": "Insight",
+        "text": "Young drivers mostly fail their first attempt because of nerves and too little preparation and many wanted an app to guide them.",
+        "paragraphs": [
+          "So the app has two sides: practice, with training exercises and video tutorials and calm, with relaxation tips and a forum where learners share experiences."
         ]
       },
       {
         "type": "row",
-        "label": "Research",
+        "label": "Design & testing",
         "paragraphs": [
-          "This page will introduce the research questions and the people or sources involved.",
-          "Add the strongest insight here, explaining how it helped define the direction of the project."
-        ],
-        "draft": true,
-        "leadBold": null
-      },
-      {
-        "type": "row",
-        "label": "Ideas",
-        "paragraphs": [
-          "Show the early concepts and the alternatives considered.",
-          "Explain why one direction was selected, and what questions still needed to be tested."
-        ],
-        "draft": true,
-        "leadBold": null
-      },
-      {
-        "type": "row",
-        "label": "Design",
-        "paragraphs": [
-          "Explain one important design decision and the need it addresses.",
-          "Add sketches, wireframes or a prototype image to show how the idea developed."
-        ],
-        "draft": true,
-        "leadBold": null
-      },
-      {
-        "type": "row",
-        "label": "Testing",
-        "paragraphs": [
-          "Describe who tried the concept and what the test was designed to learn.",
-          "Add an observation and the specific change made in response."
-        ],
-        "draft": true,
-        "leadBold": null
+          "I explored the idea as a website, in a wireframe and a prototype version and as a mobile app, including a green design that I later dropped. The final design is a high-fidelity Figma prototype you can click through, with exercises, video tutorials, relaxation tips, favourites and a community chat.",
+          "Most users liked the colours and found the navigation straightforward and some felt calmer after following a relaxation tip. They also found the filter hard to use, the forum posts too text-heavy and the colours a lot. I made the appropriate adjustments based on this."
+        ]
       },
       {
         "type": "row",
         "label": "Result",
         "paragraphs": [
-          "Summarise the final deliverable and what was demonstrated or validated.",
-          "Close with one lesson and a practical next step. Replace this draft with the final project reflection."
-        ],
-        "draft": true,
-        "leadBold": null
+          "Road Ready is a clickable prototype, not a built app: it is English only and has a limited set of exercises. The client received a presentation and an advice report with the next steps for building it."
+        ]
       }
     ]
   },
