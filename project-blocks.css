@@ -318,3 +318,33 @@ a.block-chip:is(:hover,:focus-visible){color:var(--blush)}
 
 /* Concorde Result and its website action share a compact gap. */
 .block-page[aria-label="Concorde case study"] .post-opening>.block-row:has(+ .block-link-button){margin-bottom:clamp(1.5rem,3.5vh,2.5rem)}
+
+.block-page[aria-label="Companion on the Road case study"] .block-wide-video:has(source[src="./images/companion/prototype.mp4"]) {
+  opacity: 1;
+  filter: none;
+  transform: none;
+  transition: none;
+
+  > .wide-video-frame {
+    width: 100%;
+    max-width: 300px;
+    aspect-ratio: 480 / 980;
+    max-height: none;
+    margin: 0 auto;
+    border-radius: 14% / 6.9%;
+    overflow: hidden;
+    background: transparent;
+  }
+
+  video {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-height: none;
+    object-fit: contain;
+  }
+
+  > figcaption {
+    text-align: center;
+  }
+}

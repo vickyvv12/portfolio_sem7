@@ -398,6 +398,7 @@ window.PORTFOLIO_PROJECTS = [
       {
         "type": "video",
         "src": "./images/companion/prototype.mp4",
+        "poster": "./images/companion/prototype-poster.jpg",
         "playWhenVisible": true,
         "alt": "Recording of the Road Ready mobile app prototype",
         "caption": "The high-fidelity prototype in Figma"
