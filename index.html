@@ -463,10 +463,11 @@ const homeMarkup=list.outerHTML;
 let activeProject=null,homeScroll=0,navigationBusy=false;
 const escapeHtml=value=>String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const homePreviewImages = new Map([
-  ['concorde', './images/concorde/preview.jpg'],
-  ['companion-on-the-road', './images/companion/preview.jpg'],
-  ['lighttown-speakers', './images/lighttown/preview.jpg'],
-  ['feedback-garden', './images/bloom/preview.jpg']
+  ['concorde', './images/concorde/concorde-preview.jpg'],
+  ['companion-on-the-road', './images/companion/companion-preview.jpg'],
+  ['lighttown-speakers', './images/lighttown/lighttown-preview.jpg'],
+  ['feedback-garden', './images/bloom/feedback-garden-preview.jpg'],
+  ['starter-template-library', './images/cape/cape-preview.jpg']
 ]);
 function renderHome(){
  revealObserver?.disconnect();blockCleanup?.();blockCleanup=null;
