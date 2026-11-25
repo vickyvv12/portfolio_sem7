@@ -419,74 +419,98 @@ window.PORTFOLIO_PROJECTS = [
   {
     "title": "Lighttown Speakers",
     "category": "design",
-    "tag": "Web design & development",
+    "tag": "Web design · Client project",
     "art": "speakers",
     "id": "lighttown-speakers",
     "blocks": [
       {
         "type": "intro",
         "title": "Lighttown Speakers",
-        "tag": "Web design & development",
-        "text": "A clearer introduction to a local public-speaking club.",
-        "facts": {
-          "role": "Team project · Design, development & testing",
-          "timeframe": "Semester 2 · 2024",
-          "tools": [
-            "Figma",
-            "HTML / CSS",
-            "Survey",
-            "Usability testing"
-          ],
-          "client": "Academic project"
-        }
+        "tag": "Web design · Client project"
       },
       {
         "type": "row",
         "label": "Context",
         "paragraphs": [
-          "Design and code a website explaining the club’s activities, meetings and membership.",
-          "A clearer introduction to a local public-speaking club."
+          "Lighttown Speakers is a Toastmasters club in Eindhoven that trains people in public speaking and it needed a website that speaks to companies as well as new members. In a team of three, I designed my own prototype, built the landing page and the About Us page and made the club's poster and advert."
+        ]
+      },
+      {
+        "type": "highlight",
+        "label": "Process",
+        "text": "What does a company need to see before it chooses a public speaking club?",
+        "paragraphs": [
+          "Lisandra and I researched how businesses decide and turned it into a customer journey map. I then looked at similar websites, sketched my layout and built a Figma prototype and changed it after feedback from the teachers. We then put all three team prototypes to a survey."
+        ]
+      },
+      {
+        "type": "media-strip",
+        "items": [
+          {
+            "type": "image",
+            "src": "./images/lighttown/journey-map.png",
+            "caption": "Customer journey map",
+            "alt": "Customer journey map"
+          },
+          {
+            "type": "image",
+            "src": "./images/lighttown/survey-result.png",
+            "caption": "Survey results",
+            "alt": "Survey results"
+          }
+        ]
+      },
+      {
+        "type": "highlight",
+        "label": "Insight",
+        "text": "Companies struggled to find local training and to trust what they found online.",
+        "paragraphs": [
+          "The journey map showed where it goes wrong: companies can't easily find local training, there is too little information online and too little proof that it works. So the website puts the courses and membership up front and uses the About Us page to introduce the people behind the club."
         ]
       },
       {
         "type": "row",
-        "label": "Concept",
+        "label": "Design & testing",
         "paragraphs": [
-          "Introduce the central idea and the audience it was intended for.",
-          "Explain how the concept connects the project brief to the experience visitors would have."
-        ],
-        "draft": true,
-        "leadBold": null
+          "The survey was clear: all respondents picked the same prototype when comparing every page and we built the site from it. Comments asked for tighter spacing and alignment. The client then asked for a privacy statement instead of terms and conditions and a user test of the finished site led to a more obvious home button, because clicking the logo wasn't clear enough.",
+          "I also designed the poster and advert in InDesign, my first time with the tool. After feedback from the client and teachers I removed a shadow, added the club name next to the logo and the host's name and moved the contact details and logo."
+        ]
       },
       {
-        "type": "row",
-        "label": "Design",
-        "paragraphs": [
-          "Explain one important design decision and the need it addresses.",
-          "Add sketches, wireframes or a prototype image to show how the idea developed."
-        ],
-        "draft": true,
-        "leadBold": null
-      },
-      {
-        "type": "row",
-        "label": "Build",
-        "paragraphs": [
-          "Describe the main implementation choices and your individual contribution.",
-          "Add an example of an interaction, technical challenge or improvement made during development."
-        ],
-        "draft": true,
-        "leadBold": null
+        "type": "media-strip",
+        "items": [
+          {
+            "type": "image",
+            "src": "./images/lighttown/about-page.png",
+            "caption": "The About Us page I built",
+            "alt": "The About Us page I built"
+          },
+          {
+            "type": "image",
+            "src": "./images/lighttown/poster-first.png",
+            "caption": "Poster, first draft",
+            "alt": "Poster, first draft"
+          },
+          {
+            "type": "image",
+            "src": "./images/lighttown/poster-final.png",
+            "caption": "Poster after feedback",
+            "alt": "Poster after feedback"
+          },
+          {
+            "type": "image",
+            "src": "./images/lighttown/ad.png",
+            "caption": "Advert",
+            "alt": "Advert"
+          }
+        ]
       },
       {
         "type": "row",
         "label": "Result",
         "paragraphs": [
-          "Summarise the final deliverable and what was demonstrated or validated.",
-          "Close with one lesson and a practical next step. Replace this draft with the final project reflection."
-        ],
-        "draft": true,
-        "leadBold": null
+          "The website is built and carries the client's feedback and the poster and advert met the expectations of the client and teachers."
+        ]
       }
     ]
   },
