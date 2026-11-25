@@ -466,7 +466,7 @@ window.PORTFOLIO_PROJECTS = [
           },
           {
             "type": "image",
-            "src": "./images/lighttown/wireframe-about-a.png",
+            "src": "./images/lighttown/wiireframe-about-a.png",
             "caption": "Wireframe: About page, version A",
             "alt": "Wireframe: About page, version A"
           },
