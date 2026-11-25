@@ -504,12 +504,6 @@ window.PORTFOLIO_PROJECTS = [
           },
           {
             "type": "image",
-            "src": "./images/lighttown/about-page.png",
-            "caption": "The About Us page I built",
-            "alt": "The About Us page I built"
-          },
-          {
-            "type": "image",
             "src": "./images/lighttown/poster-final.png",
             "caption": "Poster after feedback",
             "alt": "Poster after feedback"
