@@ -586,19 +586,7 @@ window.PORTFOLIO_PROJECTS = [
       {
         "type": "intro",
         "title": "Security Monitoring",
-        "tag": "Blue Team · Wazuh · Sysmon · Zeek · Suricata",
-        "text": "Following simulated attacks through logs and alerts.",
-        "facts": {
-          "role": "Monitoring lab",
-          "timeframe": "Semester 6 · 2026",
-          "tools": [
-            "pfSense",
-            "Wazuh",
-            "Zeek",
-            "Suricata"
-          ],
-          "client": "Academic project"
-        }
+        "tag": "Blue Team · Wazuh · Sysmon · Zeek · Suricata"
       },
       {
         "type": "row",
@@ -649,19 +637,7 @@ window.PORTFOLIO_PROJECTS = [
       {
         "type": "intro",
         "title": "Digital Forensics",
-        "tag": "Autopsy · IoT · Timeline analysis",
-        "text": "Reconstructing activity across connected devices.",
-        "facts": {
-          "role": "Two academic investigation cases",
-          "timeframe": "Semester 6 · 2026",
-          "tools": [
-            "Autopsy",
-            "Wireshark",
-            "HxD",
-            "DB Browser for SQLite"
-          ],
-          "client": "Academic project"
-        }
+        "tag": "Autopsy · IoT · Timeline analysis"
       },
       {
         "type": "row",
