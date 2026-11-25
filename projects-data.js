@@ -7,183 +7,6 @@ Quote: {type:'quote', label, text, attribution}. All prose is plain text.
 Add a project object with id, title, tag, category, art and blocks; navigation is automatic. */
 window.PORTFOLIO_PROJECTS = [
   {
-    "title": "Starter Template Library",
-    "category": "design",
-    "tag": "Internship · Cape",
-    "art": "cape",
-    "id": "starter-template-library",
-    "blocks": [
-      {
-        "type": "intro",
-        "title": "Starter Template Library",
-        "tag": "Internship · Cape"
-      },
-      {
-        "type": "row",
-        "label": "Context",
-        "paragraphs": [
-          "Cape's Template Builder helps teams create and reuse digital content. Cape staff use ready-made templates to show prospective clients what the tool can do in sales demos and clients can explore the library themselves during training. During my internship I designed templates for clients and for the starter library and researched how the library could better support people using the Template Builder for the first time."
-        ]
-      },
-      {
-        "type": "highlight",
-        "label": "Approach",
-        "text": "How can modular template design in Cape's Template Builder be optimised to ensure usability and scalability for clients in creative automation?",
-        "paragraphs": [
-          "I worked in the Double Diamond, using CMD research and design methods. After feedback from my company mentor, I narrowed my research questions: the library would help clients during onboarding, not serve internal use or reuse."
-        ],
-        "chips": [
-          {
-            "text": "Literature study",
-            "href": "assets/cape/documents/literature-study.pdf"
-          },
-          {
-            "text": "Competitive analysis",
-            "href": "assets/cape/documents/competitive-analysis.pdf"
-          },
-          {
-            "text": "Heuristic evaluation",
-            "href": "assets/cape/documents/heuristic-evaluation.pdf"
-          },
-          {
-            "text": "Advice report",
-            "href": "assets/cape/documents/advice-report.pdf"
-          }
-        ]
-      },
-      {
-        "type": "highlight",
-        "label": "Insight",
-        "text": "The templates themselves were strong. The real barrier was getting to the library: first-time users couldn't find it and they preferred trying templates themselves to watching a demo.",
-        "paragraphs": [
-          "A heuristic evaluation of the library's templates showed a strong, scalable structure, especially in the newer ones. The first user test then showed that the problem sat around the templates, not in them."
-        ]
-      },
-      {
-        "type": "row",
-        "label": "Design & testing",
-        "paragraphs": [
-          "I prototyped in three rounds, from low fidelity to a final version shaped by user testing. The biggest change was making the library its own tab next to Drafts and Collections, with a welcome message and a short banner explaining it. In the last test, first-time users, given no guidance, all reached the library through the welcome message. Their feedback led to two changes: a smaller pop-up and no skip button."
-        ]
-      },
-      {
-        "type": "media-strip",
-        "items": [
-          {
-            "type": "image",
-            "src": "assets/cape/prototype-v1.webp",
-            "alt": "Early Cape demo prototype showing the welcome message over the template library, with Explore template library and Skip controls.",
-            "caption": "Prototype v1"
-          },
-          {
-            "type": "image",
-            "src": "assets/cape/welcome-message.webp",
-            "alt": "Revised welcome message explaining the safe demo environment, with one Explore template library button and no Skip option.",
-            "caption": "Welcome message"
-          },
-          {
-            "type": "image",
-            "src": "assets/cape/library-tab-banner.webp",
-            "alt": "Library tab alongside Available templates, Collections, Drafts and Bin, beneath the blue Demo environment banner.",
-            "caption": "Library tab and demo banner",
-            "compact": true
-          }
-        ]
-      },
-      {
-        "type": "row",
-        "label": "Result",
-        "paragraphs": [
-          "My advice to Cape was a shared sandbox with a single entry point and temporary sessions that reset automatically, separate from production, so potential clients can explore templates safely during demos and onboarding."
-        ]
-      }
-    ],
-    "openingScreen": true
-  },
-  {
-    "title": "Feedback Garden",
-    "category": "design",
-    "tag": "Research & interaction design",
-    "art": "garden",
-    "id": "feedback-garden",
-    "blocks": [
-      {
-        "type": "intro",
-        "title": "Feedback Garden",
-        "tag": "Research & interaction design"
-      },
-      {
-        "type": "row",
-        "label": "Context",
-        "paragraphs": [
-          "Museums collect very little visitor feedback. Comment cards and exit surveys are easy to walk past and feel out of place in a quiet exhibition. Feedback Garden is an interactive installation, which we called Bloom, where a visitor answers one quick question and the answer grows into a flower in a shared garden, projected across the museum’s walls and floors."
-        ]
-      },
-      {
-        "type": "video",
-        "src": "/images/bloom/concept.mp4",
-        "poster": "/images/bloom/concept-poster.webp",
-        "alt": "Bloom concept video",
-        "caption": "Concept video: how Bloom could look at full scale."
-      },
-      {
-        "type": "highlight",
-        "label": "Process",
-        "text": "How can an interactive installation make museum visitors provide quick and meaningful feedback while remaining part of the museum experience?",
-        "paragraphs": [
-          "I followed the Double Diamond. I explored the same idea with flowers and with light, then combined their strengths in the final design."
-        ]
-      },
-      {
-        "type": "media-strip",
-        "items": [
-          {
-            "type": "image",
-            "src": "/images/bloom/first-prototype.png",
-            "caption": "First prototype: scan a QR code at an artwork",
-            "alt": "Bloom app screens, first prototype with flowers on a dark green background"
-          },
-          {
-            "type": "image",
-            "src": "/images/bloom/light-version.png",
-            "caption": "Same idea, with light instead of flowers",
-            "alt": "Bloom app screens, version with glowing light shapes instead of flowers"
-          },
-          {
-            "type": "image",
-            "src": "/images/bloom/final-design.png",
-            "caption": "Final design: the flower and the garden",
-            "alt": "Bloom app screens, final design with glowing flowers and a collective garden"
-          }
-        ]
-      },
-      {
-        "type": "highlight",
-        "label": "Insight",
-        "text": "People wanted something quick and visual, not a form. Nearly everyone chose an interactive screen and nobody wanted to write a comment.",
-        "paragraphs": [
-          "Most respondents had never given museum feedback and found it boring. So Bloom asks one question with four ready-made answers: loved it, interesting, it was okay, not for me. Each answer grows a different flower and even a negative answer gets a flower that belongs in the garden."
-        ]
-      },
-      {
-        "type": "row",
-        "label": "Design & testing",
-        "paragraphs": [
-          "The first prototype worked through a QR code: scan one next to an exhibition, answer on your phone and watch a flower join the garden. Testing showed that visitors liked having both a QR code and a screen. So I added a screen at the end of the exhibition where visitors can answer without a phone, with the QR code as an alternative.",
-          "Feedback from peers and teachers led to a second change. Bloom now asks once, at the end of the visit, because asking at every artwork would repeat the interruption we wanted to remove."
-        ]
-      },
-      {
-        "type": "device-video",
-        "src": "/images/bloom/tablet.mp4",
-        "poster": "/images/bloom/tablet-poster.webp",
-        "alt": "Bloom tablet prototype in use",
-        "caption": "The screen version for the end of the exhibition"
-      }
-    ],
-    "openingScreen": true
-  },
-  {
     "title": "Concorde",
     "category": "design",
     "tag": "Interactive storytelling",
@@ -316,6 +139,183 @@ window.PORTFOLIO_PROJECTS = [
         "ariaLabel": "Visit the Concorde website (opens in a new tab)"
       }
     ]
+  },
+  {
+    "title": "Feedback Garden",
+    "category": "design",
+    "tag": "Research & interaction design",
+    "art": "garden",
+    "id": "feedback-garden",
+    "blocks": [
+      {
+        "type": "intro",
+        "title": "Feedback Garden",
+        "tag": "Research & interaction design"
+      },
+      {
+        "type": "row",
+        "label": "Context",
+        "paragraphs": [
+          "Museums collect very little visitor feedback. Comment cards and exit surveys are easy to walk past and feel out of place in a quiet exhibition. Feedback Garden is an interactive installation, which we called Bloom, where a visitor answers one quick question and the answer grows into a flower in a shared garden, projected across the museum’s walls and floors."
+        ]
+      },
+      {
+        "type": "video",
+        "src": "/images/bloom/concept.mp4",
+        "poster": "/images/bloom/concept-poster.webp",
+        "alt": "Bloom concept video",
+        "caption": "Concept video: how Bloom could look at full scale."
+      },
+      {
+        "type": "highlight",
+        "label": "Process",
+        "text": "How can an interactive installation make museum visitors provide quick and meaningful feedback while remaining part of the museum experience?",
+        "paragraphs": [
+          "I followed the Double Diamond. I explored the same idea with flowers and with light, then combined their strengths in the final design."
+        ]
+      },
+      {
+        "type": "media-strip",
+        "items": [
+          {
+            "type": "image",
+            "src": "/images/bloom/first-prototype.png",
+            "caption": "First prototype: scan a QR code at an artwork",
+            "alt": "Bloom app screens, first prototype with flowers on a dark green background"
+          },
+          {
+            "type": "image",
+            "src": "/images/bloom/light-version.png",
+            "caption": "Same idea, with light instead of flowers",
+            "alt": "Bloom app screens, version with glowing light shapes instead of flowers"
+          },
+          {
+            "type": "image",
+            "src": "/images/bloom/final-design.png",
+            "caption": "Final design: the flower and the garden",
+            "alt": "Bloom app screens, final design with glowing flowers and a collective garden"
+          }
+        ]
+      },
+      {
+        "type": "highlight",
+        "label": "Insight",
+        "text": "People wanted something quick and visual, not a form. Nearly everyone chose an interactive screen and nobody wanted to write a comment.",
+        "paragraphs": [
+          "Most respondents had never given museum feedback and found it boring. So Bloom asks one question with four ready-made answers: loved it, interesting, it was okay, not for me. Each answer grows a different flower and even a negative answer gets a flower that belongs in the garden."
+        ]
+      },
+      {
+        "type": "row",
+        "label": "Design & testing",
+        "paragraphs": [
+          "The first prototype worked through a QR code: scan one next to an exhibition, answer on your phone and watch a flower join the garden. Testing showed that visitors liked having both a QR code and a screen. So I added a screen at the end of the exhibition where visitors can answer without a phone, with the QR code as an alternative.",
+          "Feedback from peers and teachers led to a second change. Bloom now asks once, at the end of the visit, because asking at every artwork would repeat the interruption we wanted to remove."
+        ]
+      },
+      {
+        "type": "device-video",
+        "src": "/images/bloom/tablet.mp4",
+        "poster": "/images/bloom/tablet-poster.webp",
+        "alt": "Bloom tablet prototype in use",
+        "caption": "The screen version for the end of the exhibition"
+      }
+    ],
+    "openingScreen": true
+  },
+  {
+    "title": "Starter Template Library",
+    "category": "design",
+    "tag": "Internship · Cape",
+    "art": "cape",
+    "id": "starter-template-library",
+    "blocks": [
+      {
+        "type": "intro",
+        "title": "Starter Template Library",
+        "tag": "Internship · Cape"
+      },
+      {
+        "type": "row",
+        "label": "Context",
+        "paragraphs": [
+          "Cape's Template Builder helps teams create and reuse digital content. Cape staff use ready-made templates to show prospective clients what the tool can do in sales demos and clients can explore the library themselves during training. During my internship I designed templates for clients and for the starter library and researched how the library could better support people using the Template Builder for the first time."
+        ]
+      },
+      {
+        "type": "highlight",
+        "label": "Approach",
+        "text": "How can modular template design in Cape's Template Builder be optimised to ensure usability and scalability for clients in creative automation?",
+        "paragraphs": [
+          "I worked in the Double Diamond, using CMD research and design methods. After feedback from my company mentor, I narrowed my research questions: the library would help clients during onboarding, not serve internal use or reuse."
+        ],
+        "chips": [
+          {
+            "text": "Literature study",
+            "href": "assets/cape/documents/literature-study.pdf"
+          },
+          {
+            "text": "Competitive analysis",
+            "href": "assets/cape/documents/competitive-analysis.pdf"
+          },
+          {
+            "text": "Heuristic evaluation",
+            "href": "assets/cape/documents/heuristic-evaluation.pdf"
+          },
+          {
+            "text": "Advice report",
+            "href": "assets/cape/documents/advice-report.pdf"
+          }
+        ]
+      },
+      {
+        "type": "highlight",
+        "label": "Insight",
+        "text": "The templates themselves were strong. The real barrier was getting to the library: first-time users couldn't find it and they preferred trying templates themselves to watching a demo.",
+        "paragraphs": [
+          "A heuristic evaluation of the library's templates showed a strong, scalable structure, especially in the newer ones. The first user test then showed that the problem sat around the templates, not in them."
+        ]
+      },
+      {
+        "type": "row",
+        "label": "Design & testing",
+        "paragraphs": [
+          "I prototyped in three rounds, from low fidelity to a final version shaped by user testing. The biggest change was making the library its own tab next to Drafts and Collections, with a welcome message and a short banner explaining it. In the last test, first-time users, given no guidance, all reached the library through the welcome message. Their feedback led to two changes: a smaller pop-up and no skip button."
+        ]
+      },
+      {
+        "type": "media-strip",
+        "items": [
+          {
+            "type": "image",
+            "src": "assets/cape/prototype-v1.webp",
+            "alt": "Early Cape demo prototype showing the welcome message over the template library, with Explore template library and Skip controls.",
+            "caption": "Prototype v1"
+          },
+          {
+            "type": "image",
+            "src": "assets/cape/welcome-message.webp",
+            "alt": "Revised welcome message explaining the safe demo environment, with one Explore template library button and no Skip option.",
+            "caption": "Welcome message"
+          },
+          {
+            "type": "image",
+            "src": "assets/cape/library-tab-banner.webp",
+            "alt": "Library tab alongside Available templates, Collections, Drafts and Bin, beneath the blue Demo environment banner.",
+            "caption": "Library tab and demo banner",
+            "compact": true
+          }
+        ]
+      },
+      {
+        "type": "row",
+        "label": "Result",
+        "paragraphs": [
+          "My advice to Cape was a shared sandbox with a single entry point and temporary sessions that reset automatically, separate from production, so potential clients can explore templates safely during demos and onboarding."
+        ]
+      }
+    ],
+    "openingScreen": true
   },
   {
     "title": "Companion on the Road",
