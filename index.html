@@ -33,7 +33,19 @@ button:focus:not(:focus-visible),a:focus:not(:focus-visible){outline:none}
 .about-shade{position:fixed;inset:0;background:#0007;z-index:9}
 .about-panel{position:fixed;inset:0 0 0 auto;width:min(680px,100%);height:100dvh;background:var(--bg);border-left:1px solid var(--line);z-index:10;overflow-y:auto;transform:translateX(100%);visibility:hidden;transition:transform .4s ease,visibility .4s;outline:none}
 .about-panel.is-open{transform:translateX(0);visibility:visible}
-.about-panel .detail{padding-top:100px}
+#about-detail {
+  --about-body-size: clamp(1.1rem, 1.3vw, 1.3rem);
+  padding-block: clamp(3rem, 7vh, 4rem) clamp(1.25rem, 3vh, 2rem);
+}
+#about-detail .eyebrow { font-size: 0.9rem; margin: 0 0 0.5rem; }
+#about-detail h1 { font-size: clamp(2.8rem, 6vw, 5rem); line-height: 1; margin: 0 0 1.25rem; }
+#about-detail .about-copy { font-size: var(--about-body-size); max-width: 64ch; }
+#about-detail .about-copy p { font-size: inherit; line-height: 1.5; margin: 0; }
+#about-detail .about-copy p + p { margin-top: 1rem; }
+#about-detail .about-experience { margin-block: 1.25rem; }
+#about-detail .about-experience h2 { font-size: 0.85rem; margin: 0 0 0.375rem; }
+#about-detail .about-experience p + p { margin-top: 0.75rem; }
+#about-detail .about-experience-description { font-size: 1rem; color: var(--muted); }
 .about-close{position:absolute;right:28px;top:22px;border:0;background:none;font-size:34px;padding:0}
 .about-close:focus-visible{outline:none;text-decoration:underline;text-underline-offset:5px}
 .contact-screen:focus{outline:none}
@@ -524,7 +536,7 @@ document.addEventListener('click',e=>{
 });
 window.addEventListener('popstate',()=>navigate(location.href,true));
 renderRoute();
-function about(contact=false){document.querySelector('#about-detail').innerHTML=`<p class="eyebrow">${contact?'Let’s connect':'A little about me'}</p><h1 id="about-title">Hi, I’m Viktoria.</h1><div class="about-copy"><p>I’m a fourth-year HBO-ICT student at Fontys University of Applied Sciences in Eindhoven, with experience in media design and cybersecurity.</p><p>I enjoy turning research into practical digital experiences: asking questions, testing ideas and refining what I build. My work spans UX research, interaction design, front-end prototypes and security investigations.</p><h2>Experience</h2><p>Template Designer Intern at Cape · September 2025–January 2026<br>Client template creation, usability research and library prototyping.</p><p class="meta"><a href="mailto:vikivalkova8@gmail.com">Email</a> · <a href="https://www.linkedin.com/in/viktoria-valkova-8a85b0271" target="_blank" rel="noopener noreferrer">LinkedIn</a></p></div>`;openAbout()}document.querySelector('#about').onclick=()=>about();document.querySelector('#contact').onclick=openContact;
+function about(contact=false){document.querySelector('#about-detail').innerHTML=`<p class="eyebrow">${contact?'Let’s connect':'A little about me'}</p><h1 id="about-title">Hi, I’m Viktoria.</h1><div class="about-copy"><p>I’m a fourth-year HBO-ICT student at Fontys University of Applied Sciences in Eindhoven, with experience in media design and cybersecurity.</p><p>I enjoy turning research into practical digital experiences: asking questions, testing ideas and refining what I build. My work spans UX research, interaction design, front-end prototypes and security investigations.</p><div class="about-experience"><h2>Experience</h2><p>Template Designer Intern at Cape · September 2025–January 2026<br><span class="about-experience-description">Client template creation, usability research and library prototyping.</span></p></div><p class="meta"><a href="mailto:vikivalkova8@gmail.com">Email</a> · <a href="https://www.linkedin.com/in/viktoria-valkova-8a85b0271" target="_blank" rel="noopener noreferrer">LinkedIn</a></p></div>`;openAbout()}document.querySelector('#about').onclick=()=>about();document.querySelector('#contact').onclick=openContact;
 
 const contactScreen=document.querySelector('#contact-screen');
 function openContact(){document.querySelector('#contact-note').textContent='';contactScreen.showModal();contactScreen.focus({preventScroll:true})}
