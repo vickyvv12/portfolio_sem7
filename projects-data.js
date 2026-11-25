@@ -579,14 +579,14 @@ window.PORTFOLIO_PROJECTS = [
   {
     "title": "Security Monitoring",
     "category": "security",
-    "tag": "Network & web attack detection",
+    "tag": "Blue Team · Wazuh · Sysmon · Zeek · Suricata",
     "art": "network",
     "id": "security-monitoring",
     "blocks": [
       {
         "type": "intro",
         "title": "Security Monitoring",
-        "tag": "Network & web attack detection",
+        "tag": "Blue Team · Wazuh · Sysmon · Zeek · Suricata",
         "text": "Following simulated attacks through logs and alerts.",
         "facts": {
           "role": "Monitoring lab",
@@ -604,63 +604,52 @@ window.PORTFOLIO_PROJECTS = [
         "type": "row",
         "label": "Context",
         "paragraphs": [
-          "Build a lab to understand how different monitoring tools capture network and web attack activity.",
-          "Following simulated attacks through logs and alerts."
+          "I built monitoring labs in Netlab to learn how defenders see an attack. The first used Zeek, Suricata and Wazuh against a deliberately vulnerable web application. The second was my own research project: could a Windows machine detect ransomware and stop it automatically, without relying on antivirus signatures?"
         ]
       },
       {
-        "type": "row",
-        "label": "Question",
+        "type": "highlight",
+        "label": "Process",
         "paragraphs": [
-          "State the security question, scope and boundaries of the investigation.",
-          "Describe the environment and the evidence needed to answer the question."
+          "I attacked a vulnerable web app from Kali with brute force and SQL injection, and compared what each tool showed. For the research I wrote a harmless ransomware simulation in PowerShell. I placed canary files, then combined Sysmon, Windows event 4663 and Wazuh file integrity monitoring. I wrote a response script that finds the process touching the files and kills it."
         ],
-        "draft": true,
-        "leadBold": null
+        "text": "Detection is the easy half. Stopping the right process is the hard half."
+      },
+      {
+        "type": "highlight",
+        "label": "Insight",
+        "paragraphs": [
+          "Zeek logged every request, including the exact injected payload, but it never called anything malicious. Suricata raised no alerts at first, until I wrote a custom rule. A file-integrity alert alone also can't tell an update from an attack. Only when I linked it to the process behind it could I trust it."
+        ],
+        "text": "Zeek saw everything, but Suricata only spoke up when a rule matched."
       },
       {
         "type": "row",
-        "label": "Approach",
+        "label": "Testing",
         "paragraphs": [
-          "Outline the investigation or lab setup and the methods used.",
-          "Add a diagram or short demonstration explaining how evidence was collected and compared."
-        ],
-        "draft": true,
-        "leadBold": null
-      },
-      {
-        "type": "row",
-        "label": "Findings",
-        "paragraphs": [
-          "Present one finding and the evidence supporting it.",
-          "Explain what can be concluded from that evidence, including limitations and unresolved questions."
-        ],
-        "draft": true,
-        "leadBold": null
+          "I ran the simulation twice. With active response off, it encrypted every canary file. With it on, the script found the right process ID and ended it, sometimes after a single file had changed. My first version even triggered itself, because I had left a log file in the monitored folder. I added filters for safe system processes."
+        ]
       },
       {
         "type": "row",
         "label": "Result",
         "paragraphs": [
-          "Summarise the final deliverable and what was demonstrated or validated.",
-          "Close with one lesson and a practical next step. Replace this draft with the final project reflection."
-        ],
-        "draft": true,
-        "leadBold": null
+          "The setup caught the simulated attack and contained it automatically. It is a lab with a simulation, not real malware, and it would need whitelisting before use in a real organisation."
+        ]
       }
     ]
   },
   {
     "title": "Digital Forensics",
     "category": "security",
-    "tag": "Smart home & IoT investigations",
+    "tag": "Autopsy · IoT · Timeline analysis",
     "art": "terminal",
     "id": "digital-forensics",
     "blocks": [
       {
         "type": "intro",
         "title": "Digital Forensics",
-        "tag": "Smart home & IoT investigations",
+        "tag": "Autopsy · IoT · Timeline analysis",
         "text": "Reconstructing activity across connected devices.",
         "facts": {
           "role": "Two academic investigation cases",
@@ -678,49 +667,31 @@ window.PORTFOLIO_PROJECTS = [
         "type": "row",
         "label": "Context",
         "paragraphs": [
-          "Investigate two simulated incidents using smartphone images, smart-home artefacts and network captures.",
-          "Reconstructing activity across connected devices."
+          "I investigated two cases, a murder and a drug-lab raid, using only the digital evidence from phones, smart-home devices and network captures. Both are training scenarios, and the question each time was what the data could prove and what it couldn't."
         ]
       },
       {
-        "type": "row",
-        "label": "Question",
+        "type": "highlight",
+        "label": "Process",
         "paragraphs": [
-          "State the security question, scope and boundaries of the investigation.",
-          "Describe the environment and the evidence needed to answer the question."
+          "I checked the evidence hashes first so I knew nothing had changed. Then I worked through each device in Autopsy and rebuilt a timeline, converting timestamps between time zones so the logs from different devices lined up."
         ],
-        "draft": true,
-        "leadBold": null
+        "text": "Do the devices support the story the suspect told?"
+      },
+      {
+        "type": "highlight",
+        "label": "Insight",
+        "paragraphs": [
+          "In the murder case, the Alexa logs showed activity before the time he gave for arriving home. They also showed a phrase at 15:12 that sounded like an argument, not a command. The TV had no Bluetooth headphones paired, although he said he wore some."
+        ],
+        "text": "The smart speaker contradicted the suspect."
       },
       {
         "type": "row",
-        "label": "Approach",
+        "label": "Second case",
         "paragraphs": [
-          "Outline the investigation or lab setup and the methods used.",
-          "Add a diagram or short demonstration explaining how evidence was collected and compared."
-        ],
-        "draft": true,
-        "leadBold": null
-      },
-      {
-        "type": "row",
-        "label": "Findings",
-        "paragraphs": [
-          "Present one finding and the evidence supporting it.",
-          "Explain what can be concluded from that evidence, including limitations and unresolved questions."
-        ],
-        "draft": true,
-        "leadBold": null
-      },
-      {
-        "type": "row",
-        "label": "Result",
-        "paragraphs": [
-          "Summarise the final deliverable and what was demonstrated or validated.",
-          "Close with one lesson and a practical next step. Replace this draft with the final project reflection."
-        ],
-        "draft": true,
-        "leadBold": null
+          "In the raid case, a smoke-detector event on the owner's phone placed the start at about 10:36. Alarm logs and shell history on the hub pointed to an associate, and the camera had lost its external connection while still working locally. I wrote that I couldn't be fully sure it was network interference."
+        ]
       }
     ]
   }
