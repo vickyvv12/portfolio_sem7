@@ -432,7 +432,7 @@ window.PORTFOLIO_PROJECTS = [
         "type": "row",
         "label": "Context",
         "paragraphs": [
-          "Lighttown Speakers is a Toastmasters club in Eindhoven that trains people in public speaking and it needed a website that speaks to companies as well as new members. In a team of three, I designed my own prototype, built the landing page and the About Us page and made the club's poster and advert."
+          "Lighttown Speakers is a Toastmasters club in Eindhoven that trains people in public speaking and it needed a way to attract businesses and new people, so, based on our research, we decided to make a website and ads."
         ]
       },
       {
@@ -440,7 +440,7 @@ window.PORTFOLIO_PROJECTS = [
         "label": "Process",
         "text": "What does a company need to see before it chooses a public speaking club?",
         "paragraphs": [
-          "Lisandra and I researched how businesses decide and turned it into a customer journey map. I then looked at similar websites, sketched my layout and built a Figma prototype and changed it after feedback from the teachers. We then put all three team prototypes to a survey."
+          "I researched how businesses decide and turned it into a customer journey map. I then researched similar websites, sketched my layout, drew wireframes of the home and About pages in two versions each and built a Figma prototype of every page. The teachers' feedback on it led to a Terms and Conditions button, new ghost buttons and a more detailed Join page."
         ]
       },
       {
@@ -454,9 +454,27 @@ window.PORTFOLIO_PROJECTS = [
           },
           {
             "type": "image",
-            "src": "./images/lighttown/survey-result.png",
-            "caption": "Survey results",
-            "alt": "Survey results"
+            "src": "./images/lighttown/wireframe-home-a.png",
+            "caption": "Wireframe: home page, version A",
+            "alt": "Wireframe: home page, version A"
+          },
+          {
+            "type": "image",
+            "src": "./images/lighttown/wireframe-home-b.png",
+            "caption": "Wireframe: home page, version B",
+            "alt": "Wireframe: home page, version B"
+          },
+          {
+            "type": "image",
+            "src": "./images/lighttown/wireframe-about-a.png",
+            "caption": "Wireframe: About page, version A",
+            "alt": "Wireframe: About page, version A"
+          },
+          {
+            "type": "image",
+            "src": "./images/lighttown/wireframe-about-b.png",
+            "caption": "Wireframe: About page, version B",
+            "alt": "Wireframe: About page, version B"
           }
         ]
       },
@@ -472,8 +490,7 @@ window.PORTFOLIO_PROJECTS = [
         "type": "row",
         "label": "Design & testing",
         "paragraphs": [
-          "The survey was clear: all respondents picked the same prototype when comparing every page and we built the site from it. Comments asked for tighter spacing and alignment. The client then asked for a privacy statement instead of terms and conditions and a user test of the finished site led to a more obvious home button, because clicking the logo wasn't clear enough.",
-          "I also designed the poster and advert in InDesign, my first time with the tool. After feedback from the client and teachers I removed a shadow, added the club name next to the logo and the host's name and moved the contact details and logo."
+          "We put all three team prototypes to a survey and we built the website based on their choices. Comments asked for tighter spacing and alignment. The client then asked for a privacy statement instead of terms and conditions and user tests of the finished site led to a more obvious home button, because clicking the logo wasn't clear enough."
         ]
       },
       {
@@ -481,15 +498,15 @@ window.PORTFOLIO_PROJECTS = [
         "items": [
           {
             "type": "image",
-            "src": "./images/lighttown/about-page.png",
-            "caption": "The About Us page I built",
-            "alt": "The About Us page I built"
+            "src": "./images/lighttown/figma-overview.png",
+            "caption": "My Figma prototype, all pages",
+            "alt": "My Figma prototype, all pages"
           },
           {
             "type": "image",
-            "src": "./images/lighttown/poster-first.png",
-            "caption": "Poster, first draft",
-            "alt": "Poster, first draft"
+            "src": "./images/lighttown/about-page.png",
+            "caption": "The About Us page I built",
+            "alt": "The About Us page I built"
           },
           {
             "type": "image",
@@ -509,6 +526,7 @@ window.PORTFOLIO_PROJECTS = [
         "type": "row",
         "label": "Result",
         "paragraphs": [
+          "I also designed the poster and advert in InDesign, my first time with the tool. After feedback from the client and teachers I removed a shadow, added the club name next to the logo and the host's name and moved the contact details and logo.",
           "The website is built and carries the client's feedback and the poster and advert met the expectations of the client and teachers."
         ]
       }
