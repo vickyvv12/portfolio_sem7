@@ -27,9 +27,8 @@ window.PORTFOLIO_PROJECTS = [
       },
       {
         "type": "video",
-        "src": "/images/concorde/concorde-site.mp4",
-        "poster": "/images/concorde/concorde-poster.jpg",
-        "playWhenVisible": true,
+        "src": "./images/concorde/concorde-site.mp4",
+        "poster": "./images/concorde/concorde-poster.jpg",
         "alt": "Concorde website recording"
       },
       {
