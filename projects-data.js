@@ -535,19 +535,7 @@ window.PORTFOLIO_PROJECTS = [
       {
         "type": "intro",
         "title": "EU Data Spaces",
-        "tag": "Data space security assessment",
-        "text": "Investigating security between data space services.",
-        "facts": {
-          "role": "Network isolation & traffic analysis",
-          "timeframe": "Semester 6 · 2026",
-          "tools": [
-            "Network security",
-            "Traffic analysis",
-            "Risk analysis",
-            "Technical reporting"
-          ],
-          "client": "Academic project"
-        }
+        "tag": "Data space security assessment"
       },
       {
         "type": "row",
@@ -561,7 +549,7 @@ window.PORTFOLIO_PROJECTS = [
         "label": "Process",
         "text": "When can a data space be considered secure and trustworthy for data sharing?",
         "paragraphs": [
-          "We split the question into five parts, from architecture and access control to cryptography and a penetration test and combined literature research with lab testing on a live FIWARE Data Space Connector at Fontys Netlab. I researched the cryptographic algorithms and captured the traffic between the services with tcpdump and Wireshark."
+          "We split the question into five parts, from architecture and access control to cryptography and a penetration test, and combined literature research with lab testing on a live FIWARE Data Space Connector at Fontys Netlab. I researched the cryptographic algorithms and captured the traffic between the services with tcpdump and Wireshark."
         ]
       },
       {
@@ -583,7 +571,7 @@ window.PORTFOLIO_PROJECTS = [
         "type": "row",
         "label": "Result",
         "paragraphs": [
-          "Our report concluded that the deployment isn't ready for production yet and gave a ranked roadmap of eight fixes. The first three are encrypted internal traffic through a service mesh, authentication on the data store and default-deny network policies, and none of them needs a new architecture. I learned to check what each service can reach and what data it can read before trusting the security of the whole system."
+          "Our report concluded that the deployment isn't ready for production yet and gave a ranked roadmap of eight fixes. The first three are encrypted internal traffic through a service mesh, authentication on the data store and default-deny network policies, and none of them needs a new architecture."
         ]
       }
     ]
