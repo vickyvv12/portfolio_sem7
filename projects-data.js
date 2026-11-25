@@ -527,7 +527,7 @@ window.PORTFOLIO_PROJECTS = [
     ]
   },
   {
-    "title": "CitizenCity",
+    "title": "EU Data Spaces",
     "category": "security",
     "tag": "Data space security assessment",
     "art": "network",
@@ -535,7 +535,7 @@ window.PORTFOLIO_PROJECTS = [
     "blocks": [
       {
         "type": "intro",
-        "title": "CitizenCity",
+        "title": "EU Data Spaces",
         "tag": "Data space security assessment",
         "text": "Investigating security between data space services.",
         "facts": {
