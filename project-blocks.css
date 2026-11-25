@@ -348,16 +348,3 @@ a.block-chip:is(:hover,:focus-visible){color:var(--blush)}
   max-width: 100%;
   overflow-wrap: break-word;
 }
-
-.block-page:is([aria-label="Security Monitoring case study"], [aria-label="Digital Forensics case study"])
-  .block-highlight:not(.block-highlight ~ .block-highlight) > .block-label {
-  padding-inline-start: 0.75rem;
-}
-
-.block-page:is([aria-label="Security Monitoring case study"], [aria-label="Digital Forensics case study"]) .project-opening {
-  min-height: 0;
-}
-
-.block-page:is([aria-label="Security Monitoring case study"], [aria-label="Digital Forensics case study"]) .post-opening {
-  padding-top: 0;
-}
