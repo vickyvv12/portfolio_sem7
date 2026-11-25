@@ -553,49 +553,38 @@ window.PORTFOLIO_PROJECTS = [
         "type": "row",
         "label": "Context",
         "paragraphs": [
-          "The Inzicht Verlicht use case explored sharing public lighting data across systems. Our security work examined internal isolation and encryption.",
-          "Investigating security between data space services."
+          "The Municipality of Eindhoven wants to share data from its Inzicht Verlicht project, with traffic cameras, sound sensors and air quality sensors on one street, with dashboard builders and research partners without losing control over it. Our team of six tested how secure a live data space for this use case really is. I focused on the network traffic and on how the services are separated."
         ]
       },
       {
-        "type": "row",
-        "label": "Question",
+        "type": "highlight",
+        "label": "Process",
+        "text": "When can a data space be considered secure and trustworthy for data sharing?",
         "paragraphs": [
-          "State the security question, scope and boundaries of the investigation.",
-          "Describe the environment and the evidence needed to answer the question."
-        ],
-        "draft": true,
-        "leadBold": null
+          "We split the question into five parts, from architecture and access control to cryptography and a penetration test and combined literature research with lab testing on a live FIWARE Data Space Connector at Fontys Netlab. I researched the cryptographic algorithms and captured the traffic between the services with tcpdump and Wireshark."
+        ]
       },
       {
-        "type": "row",
-        "label": "Approach",
+        "type": "highlight",
+        "label": "Insight",
+        "text": "The perimeter was well protected, but the inside was not.",
         "paragraphs": [
-          "Outline the investigation or lab setup and the methods used.",
-          "Add a diagram or short demonstration explaining how evidence was collected and compared."
-        ],
-        "draft": true,
-        "leadBold": null
+          "The gateway rejected tampered tokens and SQL injection attempts. Inside the cluster, though, the services talked over plain HTTP. In my captures I could read a Keycloak login with its password, a HashiCorp Vault root token, database queries and the access rules the data space uses to decide who gets in."
+        ]
       },
       {
         "type": "row",
         "label": "Findings",
         "paragraphs": [
-          "Present one finding and the evidence supporting it.",
-          "Explain what can be concluded from that evidence, including limitations and unresolved questions."
-        ],
-        "draft": true,
-        "leadBold": null
+          "Three findings mattered most. All traffic between services inside the cluster was unencrypted. The data store, Scorpio, had no login of its own, so bypassing the gateway with a single curl request returned live sensor data. And no network policy separated the namespaces, so a test pod in the consumer namespace could reach the provider's database, identity service and data broker."
+        ]
       },
       {
         "type": "row",
         "label": "Result",
         "paragraphs": [
-          "Summarise the final deliverable and what was demonstrated or validated.",
-          "Close with one lesson and a practical next step. Replace this draft with the final project reflection."
-        ],
-        "draft": true,
-        "leadBold": null
+          "Our report concluded that the deployment isn't ready for production yet and gave a ranked roadmap of eight fixes. The first three are encrypted internal traffic through a service mesh, authentication on the data store and default-deny network policies, and none of them needs a new architecture. I learned to check what each service can reach and what data it can read before trusting the security of the whole system."
+        ]
       }
     ]
   },
