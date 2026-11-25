@@ -422,6 +422,7 @@ body.project-view .blossom-field .blossom:nth-child(2){display:block;position:fi
 }
 
 /* A quiet division between design and cyber security, within the index height. */
+#projects .preview img{display:block;width:100%;height:100%;aspect-ratio:3 / 2;object-fit:cover}
 #projects .project-divider{display:flex;align-items:center;gap:12px;width:100%;flex:0 0 auto;margin:0;color:var(--fg);font:14px/1.4 Arial,Helvetica,sans-serif}
 #projects .project-divider::before,#projects .project-divider::after{content:"";height:1px;background:currentColor;opacity:.3}
 #projects .project-divider::before{width:24px;flex:0 0 24px}
@@ -461,6 +462,12 @@ const main=document.querySelector('main');
 const homeMarkup=list.outerHTML;
 let activeProject=null,homeScroll=0,navigationBusy=false;
 const escapeHtml=value=>String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const homePreviewImages = new Map([
+  ['concorde', './images/concorde/preview.jpg'],
+  ['companion-on-the-road', './images/companion/preview.jpg'],
+  ['lighttown-speakers', './images/lighttown/preview.jpg'],
+  ['feedback-garden', './images/bloom/preview.jpg']
+]);
 function renderHome(){
  revealObserver?.disconnect();blockCleanup?.();blockCleanup=null;
  document.body.classList.remove('project-view');
@@ -473,7 +480,9 @@ function renderHome(){
    divider.innerHTML='<span>Cyber security</span>';target.append(divider);
   }
   const row=document.createElement('div');row.className='project';row.dataset.category=p.category;
-  row.innerHTML=`<a class="project-link" href="${projectUrl(p)}"><span class="num">[${String(i+1).padStart(2,'0')}]</span><span class="title" style="view-transition-name:project-${slug(p)}">${p.title}</span><span class="tag">[${p.tag}]</span></a><div class="preview">${graphic(p.art)}</div>`;
+  const previewPath = homePreviewImages.get(p.id);
+  const preview = previewPath ? `<img src="${previewPath}" loading="lazy" alt="">` : graphic(p.art);
+  row.innerHTML=`<a class="project-link" href="${projectUrl(p)}"><span class="num">[${String(i+1).padStart(2,'0')}]</span><span class="title" style="view-transition-name:project-${slug(p)}">${p.title}</span><span class="tag">[${p.tag}]</span></a><div class="preview">${preview}</div>`;
   target.append(row);
  });
  measureHeader();
